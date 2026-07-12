@@ -121,6 +121,14 @@ build src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj: CXX_COMPILER__kun
   TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
   TARGET_PDB = src\kungfu_chess.pdb
 
+build src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj: CXX_COMPILER__kungfu_chess_Debug C$:\kungfu_chess\src\texttests\ScriptRunner.cpp || cmake_object_order_depends_target_kungfu_chess
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src
+  OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\kungfu_chess.dir\texttests
+  TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
+  TARGET_PDB = src\kungfu_chess.pdb
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target kungfu_chess
@@ -129,7 +137,7 @@ build src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj: CXX_COMPILER__kun
 #############################################
 # Link the static library src\kungfu_chess.lib
 
-build src\kungfu_chess.lib: CXX_STATIC_LIBRARY_LINKER__kungfu_chess_Debug src\CMakeFiles\kungfu_chess.dir\model\position.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\board.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardParser.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj
+build src\kungfu_chess.lib: CXX_STATIC_LIBRARY_LINKER__kungfu_chess_Debug src\CMakeFiles\kungfu_chess.dir\model\position.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\board.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardParser.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir
@@ -399,6 +407,83 @@ build tests\unit\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build tests\unit\rebuild_cache: phony tests\unit\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/kungfu_chess/tests/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ScriptRunnerTest
+
+
+#############################################
+# Order-only phony target for ScriptRunnerTest
+
+build cmake_object_order_depends_target_ScriptRunnerTest: phony || cmake_object_order_depends_target_kungfu_chess
+
+build tests\integration\CMakeFiles\ScriptRunnerTest.dir\ScriptRunnerTest.cpp.obj: CXX_COMPILER__ScriptRunnerTest_Debug C$:\kungfu_chess\tests\integration\ScriptRunnerTest.cpp || cmake_object_order_depends_target_ScriptRunnerTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src
+  OBJECT_DIR = tests\integration\CMakeFiles\ScriptRunnerTest.dir
+  OBJECT_FILE_DIR = tests\integration\CMakeFiles\ScriptRunnerTest.dir
+  TARGET_COMPILE_PDB = tests\integration\CMakeFiles\ScriptRunnerTest.dir\
+  TARGET_PDB = tests\integration\ScriptRunnerTest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ScriptRunnerTest
+
+
+#############################################
+# Link the executable tests\integration\ScriptRunnerTest.exe
+
+build tests\integration\ScriptRunnerTest.exe: CXX_EXECUTABLE_LINKER__ScriptRunnerTest_Debug tests\integration\CMakeFiles\ScriptRunnerTest.dir\ScriptRunnerTest.cpp.obj | src\kungfu_chess.lib || src\kungfu_chess.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = src\kungfu_chess.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = tests\integration\CMakeFiles\ScriptRunnerTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = tests\integration\CMakeFiles\ScriptRunnerTest.dir\
+  TARGET_FILE = tests\integration\ScriptRunnerTest.exe
+  TARGET_IMPLIB = tests\integration\ScriptRunnerTest.lib
+  TARGET_PDB = tests\integration\ScriptRunnerTest.pdb
+
+
+#############################################
+# Utility command for test
+
+build tests\integration\CMakeFiles\test.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\kungfu_chess\out\build\x64-Debug\tests\integration && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build tests\integration\test: phony tests\integration\CMakeFiles\test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests\integration\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\kungfu_chess\out\build\x64-Debug\tests\integration && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests\integration\edit_cache: phony tests\integration\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests\integration\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\kungfu_chess\out\build\x64-Debug\tests\integration && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\kungfu_chess -BC:\kungfu_chess\out\build\x64-Debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests\integration\rebuild_cache: phony tests\integration\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build BoardParserTest: phony tests\unit\BoardParserTest.exe
@@ -408,6 +493,10 @@ build BoardParserTest.exe: phony tests\unit\BoardParserTest.exe
 build BoardPrinterTest: phony tests\unit\BoardPrinterTest.exe
 
 build BoardPrinterTest.exe: phony tests\unit\BoardPrinterTest.exe
+
+build ScriptRunnerTest: phony tests\integration\ScriptRunnerTest.exe
+
+build ScriptRunnerTest.exe: phony tests\integration\ScriptRunnerTest.exe
 
 build kungfu_chess: phony src\kungfu_chess.lib
 
@@ -443,7 +532,14 @@ build src\all: phony src\kungfu_chess.lib
 #############################################
 # Folder: C:/kungfu_chess/out/build/x64-Debug/tests
 
-build tests\all: phony tests\unit\all
+build tests\all: phony tests\unit\all tests\integration\all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/kungfu_chess/out/build/x64-Debug/tests/integration
+
+build tests\integration\all: phony tests\integration\ScriptRunnerTest.exe
 
 # =============================================================================
 
@@ -459,14 +555,14 @@ build tests\unit\all: phony tests\unit\local_gtest.lib tests\unit\local_gtest_ma
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\tests\CMakeLists.txt ..\..\..\tests\unit\CMakeLists.txt C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.22.22040401-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\tests\CMakeLists.txt ..\..\..\tests\integration\CMakeLists.txt ..\..\..\tests\unit\CMakeLists.txt C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.22.22040401-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\tests\CMakeLists.txt ..\..\..\tests\unit\CMakeLists.txt C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.22.22040401-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeSystem.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\src\CMakeLists.txt ..\..\..\tests\CMakeLists.txt ..\..\..\tests\integration\CMakeLists.txt ..\..\..\tests\unit\CMakeLists.txt C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.22.22040401-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.22.22040401-MSVC_2\CMakeSystem.cmake: phony
 
 
 #############################################

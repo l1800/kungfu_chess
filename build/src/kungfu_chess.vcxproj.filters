@@ -13,6 +13,9 @@
     <ClCompile Include="C:\kungfu_chess\src\io\boardPrinter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\src\texttests\ScriptRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\kungfu_chess\src\CMakeLists.txt" />

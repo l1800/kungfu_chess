@@ -9,3 +9,5 @@ C:/kungfu_chess/build/tests/unit/CMakeFiles/local_gtest_main.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardParserTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardPrinterTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/RUN_TESTS.dir
+C:/kungfu_chess/build/tests/integration/CMakeFiles/ScriptRunnerTest.dir
+C:/kungfu_chess/build/tests/integration/CMakeFiles/RUN_TESTS.dir

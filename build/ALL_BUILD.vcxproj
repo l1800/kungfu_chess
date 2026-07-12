@@ -179,6 +179,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{17EC22BD-9BFB-3C0D-9533-835D71BA5DD8}</Project>
       <Name>BoardPrinterTest</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\tests\integration\ScriptRunnerTest.vcxproj">
+      <Project>{892AAD9B-6F25-3F4F-B229-2D6B4DDDE966}</Project>
+      <Name>ScriptRunnerTest</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\kungfu_chess\build\src\kungfu_chess.vcxproj">
       <Project>{B8FCE580-6CF2-369E-9244-6229E5B8652E}</Project>
       <Name>kungfu_chess</Name>

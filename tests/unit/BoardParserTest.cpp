@@ -1,55 +1,64 @@
 #include "../../src/io/boardParser.hpp"
+
 #include <cassert>
 #include <stdexcept>
 #include <string>
 
 int main()
 {
+    // BoardParser accepts a valid rectangular board.
     {
-        const std::string text =
-            ". .\n"
-            "wK .";
-
-        Board board = BoardParser::parse(text);
-
-        assert(board.width() == 2);
-        assert(board.height() == 2);
-    }
-
-    {
-        const std::string text =
+        const std::string input =
             ". . .\n"
-            ". .";
+            ". wK .\n"
+            ". . .";
 
-        bool threw = false;
+        const Board board = BoardParser::parse(input);
 
-        try
-        {
-            BoardParser::parse(text);
-        }
-        catch (const std::runtime_error&)
-        {
-            threw = true;
-        }
-
-        assert(threw);
+        assert(board.width() == 3);
+        assert(board.height() == 3);
     }
 
+    // BoardParser rejects rows with different lengths.
     {
-        const std::string text = "XX .";
+        const std::string input =
+            ". . .\n"
+            ". .\n"
+            ". . .";
 
-        bool threw = false;
+        bool exceptionThrown = false;
 
         try
         {
-            BoardParser::parse(text);
+            BoardParser::parse(input);
         }
         catch (const std::runtime_error&)
         {
-            threw = true;
+            exceptionThrown = true;
         }
 
-        assert(threw);
+        assert(exceptionThrown);
+    }
+
+    // BoardParser rejects an unknown token.
+    {
+        const std::string input =
+            ". . .\n"
+            ". XX .\n"
+            ". . .";
+
+        bool exceptionThrown = false;
+
+        try
+        {
+            BoardParser::parse(input);
+        }
+        catch (const std::runtime_error&)
+        {
+            exceptionThrown = true;
+        }
+
+        assert(exceptionThrown);
     }
 
     return 0;

@@ -37,3 +37,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/kungfu_chess/build/tests/unit/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/kungfu_chess/build/tests/integration/cmake_install.cmake")
+endif()
+
