@@ -1,0 +1,33 @@
+Start testing: Jul 12 11:24 שעון קיץ ירושלים
+----------------------------------------------------------
+1/2 Testing: BoardParserTest
+1/2 Test: BoardParserTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"BoardParserTest" start time: Jul 12 11:24 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"BoardParserTest" end time: Jul 12 11:24 שעון קיץ ירושלים
+"BoardParserTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: BoardPrinterTest
+2/2 Test: BoardPrinterTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardPrinterTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"BoardPrinterTest" start time: Jul 12 11:24 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"BoardPrinterTest" end time: Jul 12 11:24 שעון קיץ ירושלים
+"BoardPrinterTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 12 11:24 שעון קיץ ירושלים

@@ -1,0 +1,17 @@
+C:/kungfu_chess/out/build/x64-Debug/CMakeFiles/test.dir
+C:/kungfu_chess/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/kungfu_chess.dir
+C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/test.dir
+C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/edit_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/rebuild_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/CMakeFiles/test.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/CMakeFiles/edit_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/CMakeFiles/rebuild_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/local_gtest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/local_gtest_main.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/BoardParserTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/BoardPrinterTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/test.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/edit_cache.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/rebuild_cache.dir

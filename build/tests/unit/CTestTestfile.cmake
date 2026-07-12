@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: C:/kungfu_chess/tests/unit
+# Build directory: C:/kungfu_chess/build/tests/unit
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+if("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+  add_test([=[BoardParserTest]=] "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe")
+  set_tests_properties([=[BoardParserTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;41;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+elseif("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+  add_test([=[BoardParserTest]=] "C:/kungfu_chess/build/tests/unit/Release/BoardParserTest.exe")
+  set_tests_properties([=[BoardParserTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;41;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+elseif("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+  add_test([=[BoardParserTest]=] "C:/kungfu_chess/build/tests/unit/MinSizeRel/BoardParserTest.exe")
+  set_tests_properties([=[BoardParserTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;41;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+elseif("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+  add_test([=[BoardParserTest]=] "C:/kungfu_chess/build/tests/unit/RelWithDebInfo/BoardParserTest.exe")
+  set_tests_properties([=[BoardParserTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;41;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+else()
+  add_test([=[BoardParserTest]=] NOT_AVAILABLE)
+endif()
+if("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+  add_test([=[BoardPrinterTest]=] "C:/kungfu_chess/build/tests/unit/Debug/BoardPrinterTest.exe")
+  set_tests_properties([=[BoardPrinterTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;57;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+elseif("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+  add_test([=[BoardPrinterTest]=] "C:/kungfu_chess/build/tests/unit/Release/BoardPrinterTest.exe")
+  set_tests_properties([=[BoardPrinterTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;57;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+elseif("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
+  add_test([=[BoardPrinterTest]=] "C:/kungfu_chess/build/tests/unit/MinSizeRel/BoardPrinterTest.exe")
+  set_tests_properties([=[BoardPrinterTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;57;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+elseif("${CTEST_CONFIGURATION_TYPE}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+  add_test([=[BoardPrinterTest]=] "C:/kungfu_chess/build/tests/unit/RelWithDebInfo/BoardPrinterTest.exe")
+  set_tests_properties([=[BoardPrinterTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;57;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+else()
+  add_test([=[BoardPrinterTest]=] NOT_AVAILABLE)
+endif()

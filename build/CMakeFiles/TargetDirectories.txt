@@ -1,0 +1,11 @@
+C:/kungfu_chess/build/CMakeFiles/RUN_TESTS.dir
+C:/kungfu_chess/build/CMakeFiles/ALL_BUILD.dir
+C:/kungfu_chess/build/CMakeFiles/ZERO_CHECK.dir
+C:/kungfu_chess/build/src/CMakeFiles/kungfu_chess.dir
+C:/kungfu_chess/build/src/CMakeFiles/RUN_TESTS.dir
+C:/kungfu_chess/build/tests/CMakeFiles/RUN_TESTS.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/local_gtest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/local_gtest_main.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardParserTest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardPrinterTest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/RUN_TESTS.dir
