@@ -1,10 +1,10 @@
-Start testing: Jul 12 17:39 שעון קיץ ירושלים
+Start testing: Jul 12 18:16 שעון קיץ ירושלים
 ----------------------------------------------------------
-4/6 Testing: BoardParserTest
-4/6 Test: BoardParserTest
+4/8 Testing: BoardParserTest
+4/8 Test: BoardParserTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardParserTest" start time: Jul 12 17:39 שעון קיץ ירושלים
+"BoardParserTest" start time: Jul 12 18:16 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -23,11 +23,11 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 3 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 3 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardParserTest" end time: Jul 12 17:39 שעון קיץ ירושלים
+"BoardParserTest" end time: Jul 12 18:16 שעון קיץ ירושלים
 "BoardParserTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 12 17:39 שעון קיץ ירושלים
+End testing: Jul 12 18:16 שעון קיץ ירושלים

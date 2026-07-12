@@ -5,6 +5,9 @@
       <FullPath>C:\kungfu_chess\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\BoardMapperTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\BoardParserTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
@@ -12,6 +15,9 @@
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\BoardTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\ControllerTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PieceTest.exe</FullPath>

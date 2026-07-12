@@ -171,6 +171,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\tests\unit\BoardMapperTest.vcxproj">
+      <Project>{52C8F773-2DA0-30DF-A761-6C64C511EB90}</Project>
+      <Name>BoardMapperTest</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\kungfu_chess\build\tests\unit\BoardParserTest.vcxproj">
       <Project>{7A9F82F9-A797-3130-AEAF-93F8451CF3C8}</Project>
       <Name>BoardParserTest</Name>
@@ -182,6 +186,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\kungfu_chess\build\tests\unit\BoardTest.vcxproj">
       <Project>{C43D050C-5148-3C20-A92C-9003EA1E62C9}</Project>
       <Name>BoardTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\tests\unit\ControllerTest.vcxproj">
+      <Project>{17DAB39D-3E97-33FB-964B-53D574C11284}</Project>
+      <Name>ControllerTest</Name>
     </ProjectReference>
     <ProjectReference Include="C:\kungfu_chess\build\tests\unit\PieceTest.vcxproj">
       <Project>{595BD084-55A7-3252-A073-4B6A2C2E10BF}</Project>

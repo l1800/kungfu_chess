@@ -16,6 +16,12 @@
     <ClCompile Include="C:\kungfu_chess\src\io\boardPrinter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\src\input\boardMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\src\input\controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\kungfu_chess\src\texttests\ScriptRunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

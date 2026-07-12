@@ -4,6 +4,12 @@
     <ClCompile Include="C:\kungfu_chess\tests\unit\BoardParserTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\tests\unit\boardMapperTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\tests\unit\controllerTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\kungfu_chess\tests\unit\CMakeLists.txt" />

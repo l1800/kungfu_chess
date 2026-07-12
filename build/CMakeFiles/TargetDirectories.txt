@@ -20,6 +20,8 @@ C:/kungfu_chess/build/tests/unit/CMakeFiles/PieceTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardParserTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardPrinterTest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/BoardMapperTest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/ControllerTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/RUN_TESTS.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/INSTALL.dir
 C:/kungfu_chess/build/tests/integration/CMakeFiles/ScriptRunnerTest.dir

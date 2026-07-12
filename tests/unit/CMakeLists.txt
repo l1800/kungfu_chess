@@ -1,7 +1,7 @@
 function(add_kungfu_unit_test test_name source_file)
     add_executable(${test_name}
         ${source_file}
-    )
+     "boardMapperTest.cpp" "controllerTest.cpp")
 
     target_link_libraries(${test_name}
         PRIVATE
@@ -38,4 +38,13 @@ add_kungfu_unit_test(
 add_kungfu_unit_test(
     BoardPrinterTest
     BoardPrinterTest.cpp
+)
+add_kungfu_unit_test(
+    BoardMapperTest
+    boardMapperTest.cpp
+)
+
+add_kungfu_unit_test(
+    ControllerTest
+    controllerTest.cpp
 )

@@ -2,10 +2,15 @@ add_library(kungfu_chess
     model/position.cpp
     model/piece.cpp
     model/board.cpp
+
     io/boardParser.cpp
     io/boardPrinter.cpp
+
+    input/boardMapper.cpp
+    input/controller.cpp
+
     texttests/ScriptRunner.cpp
-)
+ "input/boardMapper.cpp" "input/controller.cpp")
 
 target_include_directories(kungfu_chess
     PUBLIC

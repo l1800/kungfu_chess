@@ -36,6 +36,8 @@ C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/PieceTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/BoardTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/BoardParserTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/BoardPrinterTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/BoardMapperTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/ControllerTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/test.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/edit_cache.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/rebuild_cache.dir
