@@ -1,28 +1,36 @@
-#include "BoardPrinter.hpp"
+#include "boardPrinter.hpp"
 
+#include "../model/piece.hpp"
 
-std::string BoardPrinter::print(
-    const Board& board
-)
+std::string BoardPrinter::print(const Board& board)
 {
     std::string output;
 
-
-    for (int r = 0; r < board.height(); r++)
+    for (int row = 0; row < board.height(); ++row)
     {
-        for (int c = 0; c < board.width(); c++)
+        for (int col = 0; col < board.width(); ++col)
         {
-            output += board.getCell(r, c);
+            const Piece* piece =
+                board.getPieceAt(
+                    Position(row, col)
+                );
 
-            if (c < board.width() - 1)
+            output +=
+                piece == nullptr
+                ? "."
+                : pieceToToken(*piece);
+
+            if (col + 1 < board.width())
+            {
                 output += " ";
+            }
         }
 
-
-        if (r < board.height() - 1)
+        if (row + 1 < board.height())
+        {
             output += "\n";
+        }
     }
-
 
     return output;
 }

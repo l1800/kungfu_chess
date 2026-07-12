@@ -1,65 +1,53 @@
+#include <gtest/gtest.h>
+
 #include "../../src/io/boardParser.hpp"
 
-#include <cassert>
 #include <stdexcept>
 #include <string>
 
-int main()
+TEST(BoardParserTest, ParsesRectangularBoard)
 {
-    // BoardParser accepts a valid rectangular board.
-    {
-        const std::string input =
-            ". . .\n"
-            ". wK .\n"
-            ". . .";
+    const std::string input =
+        ". . .\n"
+        ". wK .\n"
+        ". . .";
 
-        const Board board = BoardParser::parse(input);
+    const Board board = BoardParser::parse(input);
 
-        assert(board.width() == 3);
-        assert(board.height() == 3);
-    }
+    EXPECT_EQ(board.width(), 3);
+    EXPECT_EQ(board.height(), 3);
 
-    // BoardParser rejects rows with different lengths.
-    {
-        const std::string input =
-            ". . .\n"
-            ". .\n"
-            ". . .";
+    const Piece* piece =
+        board.getPieceAt(Position(1, 1));
 
-        bool exceptionThrown = false;
+    ASSERT_NE(piece, nullptr);
+    EXPECT_EQ(piece->kind(), PieceKind::King);
+    EXPECT_EQ(piece->color(), PieceColor::White);
+    EXPECT_EQ(piece->cell(), Position(1, 1));
+}
 
-        try
-        {
-            BoardParser::parse(input);
-        }
-        catch (const std::runtime_error&)
-        {
-            exceptionThrown = true;
-        }
+TEST(BoardParserTest, RejectsNonRectangularBoard)
+{
+    const std::string input =
+        ". . .\n"
+        ". wK\n"
+        ". . .";
 
-        assert(exceptionThrown);
-    }
+    EXPECT_THROW(
+        BoardParser::parse(input),
+        std::invalid_argument
+    );
+}
 
-    // BoardParser rejects an unknown token.
-    {
-        const std::string input =
-            ". . .\n"
-            ". XX .\n"
-            ". . .";
+TEST(BoardParserTest, RejectsUnknownToken)
+{
+    const std::string input =
+        ". . .\n"
+        ". X .\n"
+        ". . .";
 
-        bool exceptionThrown = false;
-
-        try
-        {
-            BoardParser::parse(input);
-        }
-        catch (const std::runtime_error&)
-        {
-            exceptionThrown = true;
-        }
-
-        assert(exceptionThrown);
-    }
-
-    return 0;
+    EXPECT_THROW(
+        BoardParser::parse(input),
+        std::invalid_argument
+    );
 }

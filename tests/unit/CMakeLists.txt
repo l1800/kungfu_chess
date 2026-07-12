@@ -1,60 +1,41 @@
-set(GTEST_ROOT
-    "${CMAKE_SOURCE_DIR}/external/googletest/googletest"
+function(add_kungfu_unit_test test_name source_file)
+    add_executable(${test_name}
+        ${source_file}
+    )
+
+    target_link_libraries(${test_name}
+        PRIVATE
+            kungfu_chess
+            GTest::gtest_main
+    )
+
+    add_test(
+        NAME ${test_name}
+        COMMAND $<TARGET_FILE:${test_name}>
+    )
+endfunction()
+
+add_kungfu_unit_test(
+    PositionTest
+    positionTest.cpp
 )
 
-add_library(local_gtest STATIC
-    "${GTEST_ROOT}/src/gtest-all.cc"
+add_kungfu_unit_test(
+    PieceTest
+    pieceTest.cpp
 )
 
-target_include_directories(local_gtest
-    PUBLIC
-        "${GTEST_ROOT}/include"
-        "${GTEST_ROOT}"
+add_kungfu_unit_test(
+    BoardTest
+    boardTest.cpp
 )
 
-add_library(local_gtest_main STATIC
-    "${GTEST_ROOT}/src/gtest_main.cc"
-)
-
-target_include_directories(local_gtest_main
-    PUBLIC
-        "${GTEST_ROOT}/include"
-        "${GTEST_ROOT}"
-)
-
-target_link_libraries(local_gtest_main
-    PUBLIC
-        local_gtest
-)
-
-
-add_executable(BoardParserTest
+add_kungfu_unit_test(
+    BoardParserTest
     BoardParserTest.cpp
 )
 
-target_link_libraries(BoardParserTest
-    PRIVATE
-        kungfu_chess
-        local_gtest_main
-)
-
-add_test(
-    NAME BoardParserTest
-    COMMAND $<TARGET_FILE:BoardParserTest>
-)
-
-
-add_executable(BoardPrinterTest
+add_kungfu_unit_test(
+    BoardPrinterTest
     BoardPrinterTest.cpp
-)
-
-target_link_libraries(BoardPrinterTest
-    PRIVATE
-        kungfu_chess
-        local_gtest_main
-)
-
-add_test(
-    NAME BoardPrinterTest
-    COMMAND $<TARGET_FILE:BoardPrinterTest>
 )

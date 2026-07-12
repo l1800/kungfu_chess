@@ -1,48 +1,33 @@
-Start testing: Jul 12 12:15 שעון קיץ ירושלים
+Start testing: Jul 12 17:39 שעון קיץ ירושלים
 ----------------------------------------------------------
-1/3 Testing: BoardParserTest
-1/3 Test: BoardParserTest
+4/6 Testing: BoardParserTest
+4/6 Test: BoardParserTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardParserTest" start time: Jul 12 12:15 שעון קיץ ירושלים
+"BoardParserTest" start time: Jul 12 17:39 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from BoardParserTest
+[ RUN      ] BoardParserTest.ParsesRectangularBoard
+[       OK ] BoardParserTest.ParsesRectangularBoard (0 ms)
+[ RUN      ] BoardParserTest.RejectsNonRectangularBoard
+[       OK ] BoardParserTest.RejectsNonRectangularBoard (0 ms)
+[ RUN      ] BoardParserTest.RejectsUnknownToken
+[       OK ] BoardParserTest.RejectsUnknownToken (0 ms)
+[----------] 3 tests from BoardParserTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardParserTest" end time: Jul 12 12:15 שעון קיץ ירושלים
+"BoardParserTest" end time: Jul 12 17:39 שעון קיץ ירושלים
 "BoardParserTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/3 Testing: BoardPrinterTest
-2/3 Test: BoardPrinterTest
-Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardPrinterTest.exe"
-Directory: C:/kungfu_chess/build/tests/unit
-"BoardPrinterTest" start time: Jul 12 12:15 שעון קיץ ירושלים
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"BoardPrinterTest" end time: Jul 12 12:15 שעון קיץ ירושלים
-"BoardPrinterTest" time elapsed: 00:00:00
-----------------------------------------------------------
-
-3/3 Testing: ScriptRunnerTest
-3/3 Test: ScriptRunnerTest
-Command: "C:/kungfu_chess/build/tests/integration/Debug/ScriptRunnerTest.exe"
-Directory: C:/kungfu_chess/build/tests/integration
-"ScriptRunnerTest" start time: Jul 12 12:15 שעון קיץ ירושלים
-Output:
-----------------------------------------------------------
-<end of output>
-Test time =   0.02 sec
-----------------------------------------------------------
-Test Passed.
-"ScriptRunnerTest" end time: Jul 12 12:15 שעון קיץ ירושלים
-"ScriptRunnerTest" time elapsed: 00:00:00
-----------------------------------------------------------
-
-End testing: Jul 12 12:15 שעון קיץ ירושלים
+End testing: Jul 12 17:39 שעון קיץ ירושלים

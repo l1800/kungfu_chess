@@ -1,5 +1,6 @@
 add_library(kungfu_chess
     model/position.cpp
+    model/piece.cpp
     model/board.cpp
     io/boardParser.cpp
     io/boardPrinter.cpp
@@ -8,5 +9,5 @@ add_library(kungfu_chess
 
 target_include_directories(kungfu_chess
     PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}
 )

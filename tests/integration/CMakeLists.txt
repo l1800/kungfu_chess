@@ -4,7 +4,8 @@ add_executable(ScriptRunnerTest
 
 target_link_libraries(ScriptRunnerTest
     PRIVATE
-    kungfu_chess
+        kungfu_chess
+        GTest::gtest_main
 )
 
 add_test(

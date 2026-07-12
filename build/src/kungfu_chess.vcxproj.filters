@@ -4,6 +4,9 @@
     <ClCompile Include="C:\kungfu_chess\src\model\position.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\src\model\piece.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\kungfu_chess\src\model\board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

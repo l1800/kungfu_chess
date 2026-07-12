@@ -1,4 +1,7 @@
-BoardParserTest 4 0.00483465
-BoardPrinterTest 4 0.00497438
-ScriptRunnerTest 1 0.0188797
+PositionTest 1 0
+PieceTest 1 0
+BoardTest 1 0
+BoardParserTest 1 0.0313088
+BoardPrinterTest 1 0
+ScriptRunnerTest 1 0
 ---

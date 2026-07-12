@@ -1,34 +1,39 @@
 #pragma once
 
-#include <vector>
-#include <string>
+#include "piece.hpp"
+#include "position.hpp"
 
+#include <optional>
+#include <vector>
 
 class Board
 {
 public:
-
     Board(int width, int height);
 
     int width() const;
     int height() const;
 
-    void setCell(
-        int row,
-        int col,
-        const std::string& value
+    bool isInside(const Position& position) const;
+
+    const Piece* getPieceAt(const Position& position) const;
+    Piece* getPieceAt(const Position& position);
+
+    void addPiece(const Piece& piece);
+    void removePiece(const Position& position);
+
+    void movePiece(
+        const Position& source,
+        const Position& destination
     );
 
-    std::string getCell(
-        int row,
-        int col
-    ) const;
-
-
 private:
+    int width_;
+    int height_;
 
-    int m_width;
-    int m_height;
+    std::vector<
+        std::vector<std::optional<Piece>>
+    > cells_;
 
-    std::vector<std::vector<std::string>> m_cells;
+    bool containsPieceId(int id) const;
 };

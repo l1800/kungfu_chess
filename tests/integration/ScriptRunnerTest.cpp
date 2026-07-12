@@ -1,4 +1,4 @@
-#include "../../src/texttests/scriptRunner.hpp"
+#include "../../src/texttests/ScriptRunner.hpp"
 
 #include <cassert>
 #include <string>

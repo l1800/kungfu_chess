@@ -11,6 +11,15 @@
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\BoardPrinterTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\BoardTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PieceTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PositionTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\integration\Debug\ScriptRunnerTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
