@@ -26,6 +26,9 @@
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PositionTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RookRuleTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\integration\Debug\ScriptRunnerTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>

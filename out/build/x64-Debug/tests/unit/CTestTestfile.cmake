@@ -18,3 +18,5 @@ add_test([=[BoardMapperTest]=] "C:/kungfu_chess/out/build/x64-Debug/tests/unit/B
 set_tests_properties([=[BoardMapperTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;12;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;42;add_kungfu_unit_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
 add_test([=[ControllerTest]=] "C:/kungfu_chess/out/build/x64-Debug/tests/unit/ControllerTest.exe")
 set_tests_properties([=[ControllerTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;12;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;47;add_kungfu_unit_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")
+add_test([=[RookRuleTest]=] "C:/kungfu_chess/out/build/x64-Debug/tests/unit/RookRuleTest.exe")
+set_tests_properties([=[RookRuleTest]=] PROPERTIES  _BACKTRACE_TRIPLES "C:/kungfu_chess/tests/unit/CMakeLists.txt;12;add_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;51;add_kungfu_unit_test;C:/kungfu_chess/tests/unit/CMakeLists.txt;0;")

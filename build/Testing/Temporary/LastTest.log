@@ -1,14 +1,14 @@
-Start testing: Jul 12 18:16 שעון קיץ ירושלים
+Start testing: Jul 12 18:39 שעון קיץ ירושלים
 ----------------------------------------------------------
-4/8 Testing: BoardParserTest
-4/8 Test: BoardParserTest
+4/9 Testing: BoardParserTest
+4/9 Test: BoardParserTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardParserTest" start time: Jul 12 18:16 שעון קיץ ירושלים
+"BoardParserTest" start time: Jul 12 18:39 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
-[==========] Running 3 tests from 1 test suite.
+[==========] Running 20 tests from 4 test suites.
 [----------] Global test environment set-up.
 [----------] 3 tests from BoardParserTest
 [ RUN      ] BoardParserTest.ParsesRectangularBoard
@@ -19,15 +19,58 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [       OK ] BoardParserTest.RejectsUnknownToken (0 ms)
 [----------] 3 tests from BoardParserTest (0 ms total)
 
+[----------] 6 tests from BoardMapperTest
+[ RUN      ] BoardMapperTest.MapsTopLeftCell
+[       OK ] BoardMapperTest.MapsTopLeftCell (0 ms)
+[ RUN      ] BoardMapperTest.MapsSecondColumn
+[       OK ] BoardMapperTest.MapsSecondColumn (0 ms)
+[ RUN      ] BoardMapperTest.MapsSecondRow
+[       OK ] BoardMapperTest.MapsSecondRow (0 ms)
+[ RUN      ] BoardMapperTest.MapsCellBoundaries
+[       OK ] BoardMapperTest.MapsCellBoundaries (0 ms)
+[ RUN      ] BoardMapperTest.RejectsNegativeCoordinates
+[       OK ] BoardMapperTest.RejectsNegativeCoordinates (0 ms)
+[ RUN      ] BoardMapperTest.RejectsCoordinatesOutsideBoard
+[       OK ] BoardMapperTest.RejectsCoordinatesOutsideBoard (0 ms)
+[----------] 6 tests from BoardMapperTest (0 ms total)
+
+[----------] 5 tests from ControllerTest
+[ RUN      ] ControllerTest.FirstClickOnPieceSelectsIt
+[       OK ] ControllerTest.FirstClickOnPieceSelectsIt (0 ms)
+[ RUN      ] ControllerTest.FirstClickOnEmptyCellIsIgnored
+[       OK ] ControllerTest.FirstClickOnEmptyCellIsIgnored (0 ms)
+[ RUN      ] ControllerTest.OutsideClickWithoutSelectionIsIgnored
+[       OK ] ControllerTest.OutsideClickWithoutSelectionIsIgnored (0 ms)
+[ RUN      ] ControllerTest.SecondInsideClickRequestsMove
+[       OK ] ControllerTest.SecondInsideClickRequestsMove (0 ms)
+[ RUN      ] ControllerTest.OutsideClickWithSelectionCancelsSelection
+[       OK ] ControllerTest.OutsideClickWithSelectionCancelsSelection (0 ms)
+[----------] 5 tests from ControllerTest (0 ms total)
+
+[----------] 6 tests from RookRuleTest
+[ RUN      ] RookRuleTest.MovesAlongRowsAndColumns
+[       OK ] RookRuleTest.MovesAlongRowsAndColumns (0 ms)
+[ RUN      ] RookRuleTest.DoesNotMoveDiagonally
+[       OK ] RookRuleTest.DoesNotMoveDiagonally (0 ms)
+[ RUN      ] RookRuleTest.StopsBeforeFriendlyPiece
+[       OK ] RookRuleTest.StopsBeforeFriendlyPiece (0 ms)
+[ RUN      ] RookRuleTest.IncludesEnemyPieceAsDestination
+[       OK ] RookRuleTest.IncludesEnemyPieceAsDestination (0 ms)
+[ RUN      ] RookRuleTest.CannotMovePastEnemyPiece
+[       OK ] RookRuleTest.CannotMovePastEnemyPiece (0 ms)
+[ RUN      ] RookRuleTest.RejectsNonRookPiece
+[       OK ] RookRuleTest.RejectsNonRookPiece (0 ms)
+[----------] 6 tests from RookRuleTest (0 ms total)
+
 [----------] Global test environment tear-down
-[==========] 3 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 3 tests.
+[==========] 20 tests from 4 test suites ran. (0 ms total)
+[  PASSED  ] 20 tests.
 <end of output>
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardParserTest" end time: Jul 12 18:16 שעון קיץ ירושלים
+"BoardParserTest" end time: Jul 12 18:39 שעון קיץ ירושלים
 "BoardParserTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 12 18:16 שעון קיץ ירושלים
+End testing: Jul 12 18:39 שעון קיץ ירושלים

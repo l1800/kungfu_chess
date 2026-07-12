@@ -1,7 +1,7 @@
 PositionTest 1 0
 PieceTest 1 0
 BoardTest 1 0
-BoardParserTest 2 0.0189562
+BoardParserTest 3 0.0144253
 BoardPrinterTest 1 0
 ScriptRunnerTest 1 0
 ---

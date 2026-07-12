@@ -9,6 +9,8 @@ add_library(kungfu_chess
     input/boardMapper.cpp
     input/controller.cpp
 
+    rules/rookRule.cpp
+
     texttests/ScriptRunner.cpp
  "input/boardMapper.cpp" "input/controller.cpp")
 

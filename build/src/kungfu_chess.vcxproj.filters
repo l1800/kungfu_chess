@@ -22,6 +22,9 @@
     <ClCompile Include="C:\kungfu_chess\src\input\controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\kungfu_chess\src\rules\rookRule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\kungfu_chess\src\texttests\ScriptRunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

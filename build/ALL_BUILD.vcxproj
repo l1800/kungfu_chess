@@ -199,6 +199,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{96180512-01AD-3E09-88ED-89B5778E677B}</Project>
       <Name>PositionTest</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\tests\unit\RookRuleTest.vcxproj">
+      <Project>{8B5AAC48-BB3A-3E18-BA4B-A1AB8BD40F69}</Project>
+      <Name>RookRuleTest</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\kungfu_chess\build\tests\integration\ScriptRunnerTest.vcxproj">
       <Project>{892AAD9B-6F25-3F4F-B229-2D6B4DDDE966}</Project>
       <Name>ScriptRunnerTest</Name>

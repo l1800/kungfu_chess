@@ -25,6 +25,15 @@ bool Position::operator!=(const Position& other) const
 {
     return !(*this == other);
 }
+bool Position::operator<(const Position& other) const
+{
+    if (row_ != other.row_)
+    {
+        return row_ < other.row_;
+    }
+
+    return col_ < other.col_;
+}
 
 std::ostream& operator<<(std::ostream& output, const Position& position)
 {
