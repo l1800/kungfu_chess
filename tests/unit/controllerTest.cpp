@@ -3,15 +3,19 @@
 #include "../../src/input/controller.hpp"
 
 #include <optional>
-
 class FakeGameEngine : public GameEngine
 {
 public:
     FakeGameEngine(
         Board& board,
-        RuleEngine& ruleEngine
+        RuleEngine& ruleEngine,
+        RealTimeArbiter& arbiter
     )
-        : GameEngine(board, ruleEngine)
+        : GameEngine(
+            board,
+            ruleEngine,
+            arbiter
+        )
     {
     }
 
@@ -29,12 +33,17 @@ public:
 
     bool called = false;
 
-    std::optional<Position> receivedSource;
-    std::optional<Position> receivedDestination;
+    std::optional<Position>
+        receivedSource;
 
-    MoveResult resultToReturn{ true, "ok" };
+    std::optional<Position>
+        receivedDestination;
+
+    MoveResult resultToReturn{
+        true,
+        "ok"
+    };
 };
-
 TEST(ControllerTest, FirstClickOnPieceSelectsIt)
 {
     Board board(3, 3);
@@ -49,7 +58,13 @@ TEST(ControllerTest, FirstClickOnPieceSelectsIt)
     );
 
     RuleEngine ruleEngine;
-    FakeGameEngine gameEngine(board, ruleEngine);
+    RealTimeArbiter arbiter(board);
+
+    FakeGameEngine gameEngine(
+        board,
+        ruleEngine,
+        arbiter
+    );
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -74,7 +89,13 @@ TEST(ControllerTest, FirstClickOnEmptyCellIsIgnored)
 {
     Board board(3, 3);
     RuleEngine ruleEngine;
-    FakeGameEngine gameEngine(board, ruleEngine);
+    RealTimeArbiter arbiter(board);
+
+    FakeGameEngine gameEngine(
+        board,
+        ruleEngine,
+        arbiter
+    );
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -93,7 +114,13 @@ TEST(ControllerTest, OutsideClickWithoutSelectionIsIgnored)
 {
     Board board(3, 3);
     RuleEngine ruleEngine;
-    FakeGameEngine gameEngine(board, ruleEngine);
+    RealTimeArbiter arbiter(board);
+
+    FakeGameEngine gameEngine(
+        board,
+        ruleEngine,
+        arbiter
+    );
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -122,7 +149,13 @@ TEST(ControllerTest, SecondInsideClickRequestsMove)
     );
 
     RuleEngine ruleEngine;
-    FakeGameEngine gameEngine(board, ruleEngine);
+    RealTimeArbiter arbiter(board);
+
+    FakeGameEngine gameEngine(
+        board,
+        ruleEngine,
+        arbiter
+    );
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -166,7 +199,13 @@ TEST(ControllerTest, RejectedMoveStillClearsSelection)
     );
 
     RuleEngine ruleEngine;
-    FakeGameEngine gameEngine(board, ruleEngine);
+    RealTimeArbiter arbiter(board);
+
+    FakeGameEngine gameEngine(
+        board,
+        ruleEngine,
+        arbiter
+    );
 
     gameEngine.resultToReturn = {
         false,
@@ -202,7 +241,13 @@ TEST(ControllerTest, OutsideClickWithSelectionCancelsSelection)
     );
 
     RuleEngine ruleEngine;
-    FakeGameEngine gameEngine(board, ruleEngine);
+    RealTimeArbiter arbiter(board);
+
+    FakeGameEngine gameEngine(
+        board,
+        ruleEngine,
+        arbiter
+    );
     BoardMapper mapper(3, 3);
 
     Controller controller(

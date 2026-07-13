@@ -2,6 +2,7 @@
 
 #include "../model/board.hpp"
 #include "../model/position.hpp"
+#include "../realtime/realTimeArbiter.hpp"
 #include "../rules/ruleEngine.hpp"
 
 #include <string>
@@ -17,7 +18,8 @@ class GameEngine
 public:
     GameEngine(
         Board& board,
-        RuleEngine& ruleEngine
+        RuleEngine& ruleEngine,
+        RealTimeArbiter& realTimeArbiter
     );
 
     virtual ~GameEngine() = default;
@@ -27,12 +29,15 @@ public:
         const Position& destination
     );
 
-    bool isGameOver() const;
+    virtual void wait(int milliseconds);
 
+    bool isGameOver() const;
     void setGameOver(bool gameOver);
 
 private:
     Board& board_;
     RuleEngine& ruleEngine_;
+    RealTimeArbiter& realTimeArbiter_;
+
     bool gameOver_;
 };

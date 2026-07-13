@@ -64,3 +64,13 @@ add_kungfu_unit_test(
     GameEngineTest
     gameEngineTest.cpp
 )
+
+add_kungfu_unit_test(
+    MotionTest
+    motionTest.cpp
+)
+
+add_kungfu_unit_test(
+    RealTimeArbiterTest
+    realTimeArbiterTest.cpp
+)

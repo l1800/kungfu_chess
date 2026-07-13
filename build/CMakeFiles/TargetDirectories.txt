@@ -25,6 +25,8 @@ C:/kungfu_chess/build/tests/unit/CMakeFiles/ControllerTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/PieceRulesTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/RuleEngineTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/GameEngineTest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/MotionTest.dir
+C:/kungfu_chess/build/tests/unit/CMakeFiles/RealTimeArbiterTest.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/RUN_TESTS.dir
 C:/kungfu_chess/build/tests/unit/CMakeFiles/INSTALL.dir
 C:/kungfu_chess/build/tests/integration/CMakeFiles/ScriptRunnerTest.dir

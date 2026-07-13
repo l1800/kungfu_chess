@@ -195,6 +195,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{1656CA67-1605-3AFC-84B4-34942F35C676}</Project>
       <Name>GameEngineTest</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\tests\unit\MotionTest.vcxproj">
+      <Project>{F68CE3AA-30BE-337D-808A-0A20F75DD15D}</Project>
+      <Name>MotionTest</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\kungfu_chess\build\tests\unit\PieceRulesTest.vcxproj">
       <Project>{D2A13F2A-235A-3BCC-B6A7-E3A69465296A}</Project>
       <Name>PieceRulesTest</Name>
@@ -206,6 +210,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\kungfu_chess\build\tests\unit\PositionTest.vcxproj">
       <Project>{96180512-01AD-3E09-88ED-89B5778E677B}</Project>
       <Name>PositionTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\tests\unit\RealTimeArbiterTest.vcxproj">
+      <Project>{6E1FFC45-D759-3FE9-BFCD-18518B7AD905}</Project>
+      <Name>RealTimeArbiterTest</Name>
     </ProjectReference>
     <ProjectReference Include="C:\kungfu_chess\build\tests\unit\RuleEngineTest.vcxproj">
       <Project>{86B6E9C5-7014-3CF7-949A-539DD62E249B}</Project>

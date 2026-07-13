@@ -2,10 +2,12 @@
 
 GameEngine::GameEngine(
     Board& board,
-    RuleEngine& ruleEngine
+    RuleEngine& ruleEngine,
+    RealTimeArbiter& realTimeArbiter
 )
     : board_(board),
     ruleEngine_(ruleEngine),
+    realTimeArbiter_(realTimeArbiter),
     gameOver_(false)
 {
 }
@@ -17,7 +19,18 @@ MoveResult GameEngine::requestMove(
 {
     if (gameOver_)
     {
-        return { false, "game_over" };
+        return {
+            false,
+            "game_over"
+        };
+    }
+
+    if (realTimeArbiter_.hasActiveMotion())
+    {
+        return {
+            false,
+            "motion_in_progress"
+        };
     }
 
     const MoveValidation validation =
@@ -35,8 +48,20 @@ MoveResult GameEngine::requestMove(
         };
     }
 
-    // באיטרציה 4 עדיין לא מזיזים את הכלי.
-    return { true, "ok" };
+    realTimeArbiter_.startMotion(
+        source,
+        destination
+    );
+
+    return {
+        true,
+        "ok"
+    };
+}
+
+void GameEngine::wait(int milliseconds)
+{
+    realTimeArbiter_.advanceTime(milliseconds);
 }
 
 bool GameEngine::isGameOver() const

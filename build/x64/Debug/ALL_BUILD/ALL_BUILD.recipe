@@ -23,6 +23,9 @@
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\GameEngineTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\MotionTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PieceRulesTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
@@ -30,6 +33,9 @@
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PositionTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RealTimeArbiterTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RuleEngineTest.exe</FullPath>

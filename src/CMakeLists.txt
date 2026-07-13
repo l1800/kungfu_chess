@@ -12,6 +12,9 @@ add_library(kungfu_chess
     rules/pieceRules.cpp
     rules/ruleEngine.cpp
 
+    realtime/motion.cpp
+    realtime/realTimeArbiter.cpp
+
     engine/gameEngine.cpp
 
     texttests/ScriptRunner.cpp

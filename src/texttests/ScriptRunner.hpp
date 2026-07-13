@@ -5,5 +5,7 @@
 class ScriptRunner
 {
 public:
-    static std::string run(const std::string& script);
+    static std::string run(
+        const std::string& script
+    );
 };
