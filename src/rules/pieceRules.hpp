@@ -20,11 +20,43 @@ private:
         const Piece& piece
     );
 
+    static std::set<Position> bishopDestinations(
+        const Board& board,
+        const Piece& piece
+    );
+
+    static std::set<Position> queenDestinations(
+        const Board& board,
+        const Piece& piece
+    );
+
+    static std::set<Position> knightDestinations(
+        const Board& board,
+        const Piece& piece
+    );
+
+    static std::set<Position> kingDestinations(
+        const Board& board,
+        const Piece& piece
+    );
+
+    static std::set<Position> pawnDestinations(
+        const Board& board,
+        const Piece& piece
+    );
+
     static void addSlidingDirection(
         const Board& board,
         const Piece& piece,
         int rowStep,
         int colStep,
+        std::set<Position>& destinations
+    );
+
+    static void addIfAvailable(
+        const Board& board,
+        const Piece& piece,
+        const Position& destination,
         std::set<Position>& destinations
     );
 };

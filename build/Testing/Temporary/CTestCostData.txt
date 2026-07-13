@@ -1,14 +1,14 @@
-BoardParserTest 3 0.0122897
-PositionTest 3 0.0126128
-PieceTest 3 0.0126262
-BoardTest 3 0.0115467
-BoardPrinterTest 3 0.00792973
-BoardMapperTest 3 0.0118693
-ControllerTest 3 0.0114431
-PieceRulesTest 3 0.0118114
-RuleEngineTest 3 0.0129846
-GameEngineTest 3 0.0115301
-ScriptRunnerTest 3 0.0116983
-MotionTest 2 0.0188583
-RealTimeArbiterTest 2 0.0183323
+BoardParserTest 4 0.00957475
+PositionTest 4 0.010563
+PieceTest 4 0.00920113
+BoardTest 4 0.00951902
+BoardPrinterTest 4 0.00579638
+BoardMapperTest 4 0.00922128
+ControllerTest 4 0.00951265
+PieceRulesTest 4 0.0090947
+RuleEngineTest 4 0.00793288
+GameEngineTest 4 0.0089732
+ScriptRunnerTest 4 0.00961023
+MotionTest 3 0.0121112
+RealTimeArbiterTest 3 0.0119552
 ---
