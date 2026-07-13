@@ -1,10 +1,10 @@
-Start testing: Jul 13 15:14 שעון קיץ ירושלים
+Start testing: Jul 13 17:29 שעון קיץ ירושלים
 ----------------------------------------------------------
-1/13 Testing: PositionTest
-1/13 Test: PositionTest
+1/16 Testing: PositionTest
+1/16 Test: PositionTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/PositionTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"PositionTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"PositionTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -25,18 +25,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 4 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 4 tests.
 <end of output>
-Test time =   0.05 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"PositionTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"PositionTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "PositionTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/13 Testing: PieceTest
-2/13 Test: PieceTest
+2/16 Testing: PieceTest
+2/16 Test: PieceTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/PieceTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"PieceTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"PieceTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -51,18 +51,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"PieceTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"PieceTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "PieceTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/13 Testing: BoardTest
-3/13 Test: BoardTest
+3/16 Testing: BoardTest
+3/16 Test: BoardTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -91,18 +91,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 8 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 8 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "BoardTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/13 Testing: BoardParserTest
-4/13 Test: BoardParserTest
+4/16 Testing: BoardParserTest
+4/16 Test: BoardParserTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardParserTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardParserTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -121,33 +121,33 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 3 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 3 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardParserTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardParserTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "BoardParserTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/13 Testing: BoardPrinterTest
-5/13 Test: BoardPrinterTest
+5/16 Testing: BoardPrinterTest
+5/16 Test: BoardPrinterTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardPrinterTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardPrinterTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardPrinterTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardPrinterTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardPrinterTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "BoardPrinterTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/13 Testing: BoardMapperTest
-6/13 Test: BoardMapperTest
+6/16 Testing: BoardMapperTest
+6/16 Test: BoardMapperTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardMapperTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardMapperTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardMapperTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -172,18 +172,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 6 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 6 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardMapperTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"BoardMapperTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "BoardMapperTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/13 Testing: ControllerTest
-7/13 Test: ControllerTest
+7/16 Testing: ControllerTest
+7/16 Test: ControllerTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/ControllerTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"ControllerTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"ControllerTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -208,18 +208,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 6 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 6 tests.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"ControllerTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"ControllerTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "ControllerTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/13 Testing: PieceRulesTest
-8/13 Test: PieceRulesTest
+8/16 Testing: PieceRulesTest
+8/16 Test: PieceRulesTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/PieceRulesTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"PieceRulesTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"PieceRulesTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -266,18 +266,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 17 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 17 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"PieceRulesTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"PieceRulesTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "PieceRulesTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/13 Testing: RuleEngineTest
-9/13 Test: RuleEngineTest
+9/16 Testing: RuleEngineTest
+9/16 Test: RuleEngineTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/RuleEngineTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"RuleEngineTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"RuleEngineTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -314,18 +314,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 12 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 12 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"RuleEngineTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"RuleEngineTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "RuleEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-10/13 Testing: GameEngineTest
-10/13 Test: GameEngineTest
+10/16 Testing: GameEngineTest
+10/16 Test: GameEngineTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/GameEngineTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"GameEngineTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"GameEngineTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -350,18 +350,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 6 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 6 tests.
 <end of output>
-Test time =   0.02 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"GameEngineTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"GameEngineTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "GameEngineTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-11/13 Testing: MotionTest
-11/13 Test: MotionTest
+11/16 Testing: MotionTest
+11/16 Test: MotionTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/MotionTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"MotionTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"MotionTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -386,18 +386,18 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 6 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 6 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"MotionTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"MotionTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "MotionTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-12/13 Testing: RealTimeArbiterTest
-12/13 Test: RealTimeArbiterTest
+12/16 Testing: RealTimeArbiterTest
+12/16 Test: RealTimeArbiterTest
 Command: "C:/kungfu_chess/build/tests/unit/Debug/RealTimeArbiterTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"RealTimeArbiterTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"RealTimeArbiterTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -418,18 +418,104 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [==========] 4 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 4 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"RealTimeArbiterTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"RealTimeArbiterTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "RealTimeArbiterTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-13/13 Testing: ScriptRunnerTest
-13/13 Test: ScriptRunnerTest
+13/16 Testing: GameSnapshotTest
+13/16 Test: GameSnapshotTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/GameSnapshotTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"GameSnapshotTest" start time: Jul 13 17:29 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from GameSnapshotTest
+[ RUN      ] GameSnapshotTest.ContainsBoardDimensionsAndPieces
+[       OK ] GameSnapshotTest.ContainsBoardDimensionsAndPieces (0 ms)
+[ RUN      ] GameSnapshotTest.ContainsSelectedCellWithoutExposingController
+[       OK ] GameSnapshotTest.ContainsSelectedCellWithoutExposingController (0 ms)
+[ RUN      ] GameSnapshotTest.MovingPieceHasInterpolatedPixelPosition
+[       OK ] GameSnapshotTest.MovingPieceHasInterpolatedPixelPosition (0 ms)
+[ RUN      ] GameSnapshotTest.ContainsGameOverFlag
+[       OK ] GameSnapshotTest.ContainsGameOverFlag (0 ms)
+[----------] 4 tests from GameSnapshotTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"GameSnapshotTest" end time: Jul 13 17:29 שעון קיץ ירושלים
+"GameSnapshotTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/16 Testing: RendererTest
+14/16 Test: RendererTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/RendererTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"RendererTest" start time: Jul 13 17:29 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from RendererTest
+[ RUN      ] RendererTest.DrawsSnapshotWithoutChangingIt
+[       OK ] RendererTest.DrawsSnapshotWithoutChangingIt (0 ms)
+[ RUN      ] RendererTest.DoesNotDrawOptionalElementsWhenAbsent
+[       OK ] RendererTest.DoesNotDrawOptionalElementsWhenAbsent (0 ms)
+[----------] 2 tests from RendererTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"RendererTest" end time: Jul 13 17:29 שעון קיץ ירושלים
+"RendererTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/16 Testing: GameViewTest
+15/16 Test: GameViewTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/GameViewTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"GameViewTest" start time: Jul 13 17:29 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from GameViewTest
+[ RUN      ] GameViewTest.ClickIsRoutedThroughController
+[       OK ] GameViewTest.ClickIsRoutedThroughController (0 ms)
+[----------] 1 test from GameViewTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"GameViewTest" end time: Jul 13 17:29 שעון קיץ ירושלים
+"GameViewTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/16 Testing: ScriptRunnerTest
+16/16 Test: ScriptRunnerTest
 Command: "C:/kungfu_chess/build/tests/integration/Debug/ScriptRunnerTest.exe"
 Directory: C:/kungfu_chess/build/tests/integration
-"ScriptRunnerTest" start time: Jul 13 15:14 שעון קיץ ירושלים
+"ScriptRunnerTest" start time: Jul 13 17:29 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
@@ -452,17 +538,17 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [       OK ] ScriptRunnerTest.BlockedRookMoveLeavesBoardUnchanged (0 ms)
 [ RUN      ] ScriptRunnerTest.FriendlyDestinationLeavesBoardUnchanged
 [       OK ] ScriptRunnerTest.FriendlyDestinationLeavesBoardUnchanged (0 ms)
-[----------] 8 tests from ScriptRunnerTest (0 ms total)
+[----------] 8 tests from ScriptRunnerTest (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 8 tests from 1 test suite ran. (0 ms total)
+[==========] 8 tests from 1 test suite ran. (1 ms total)
 [  PASSED  ] 8 tests.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"ScriptRunnerTest" end time: Jul 13 15:14 שעון קיץ ירושלים
+"ScriptRunnerTest" end time: Jul 13 17:29 שעון קיץ ירושלים
 "ScriptRunnerTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 13 15:14 שעון קיץ ירושלים
+End testing: Jul 13 17:29 שעון קיץ ירושלים

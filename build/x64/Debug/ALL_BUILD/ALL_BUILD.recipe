@@ -23,6 +23,12 @@
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\GameEngineTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\GameSnapshotTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\GameViewTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\MotionTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
@@ -36,6 +42,9 @@
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RealTimeArbiterTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RendererTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RuleEngineTest.exe</FullPath>

@@ -74,3 +74,18 @@ add_kungfu_unit_test(
     RealTimeArbiterTest
     realTimeArbiterTest.cpp
 )
+
+add_kungfu_unit_test(
+    GameSnapshotTest
+    gameSnapshotTest.cpp
+)
+
+add_kungfu_unit_test(
+    RendererTest
+    rendererTest.cpp
+)
+
+add_kungfu_unit_test(
+    GameViewTest
+    gameViewTest.cpp
+)

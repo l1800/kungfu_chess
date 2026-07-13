@@ -41,6 +41,11 @@ C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/ControllerTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/PieceRulesTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/RuleEngineTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/GameEngineTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/MotionTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/RealTimeArbiterTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/GameSnapshotTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/RendererTest.dir
+C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/GameViewTest.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/test.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/edit_cache.dir
 C:/kungfu_chess/out/build/x64-Debug/tests/unit/CMakeFiles/rebuild_cache.dir

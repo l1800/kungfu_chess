@@ -215,6 +215,22 @@ build src\CMakeFiles\kungfu_chess.dir\engine\gameEngine.cpp.obj: CXX_COMPILER__k
   TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
   TARGET_PDB = src\kungfu_chess.pdb
 
+build src\CMakeFiles\kungfu_chess.dir\view\renderer.cpp.obj: CXX_COMPILER__kungfu_chess_Debug C$:\kungfu_chess\src\view\renderer.cpp || cmake_object_order_depends_target_kungfu_chess
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src
+  OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\kungfu_chess.dir\view
+  TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
+  TARGET_PDB = src\kungfu_chess.pdb
+
+build src\CMakeFiles\kungfu_chess.dir\view\gameView.cpp.obj: CXX_COMPILER__kungfu_chess_Debug C$:\kungfu_chess\src\view\gameView.cpp || cmake_object_order_depends_target_kungfu_chess
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src
+  OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\kungfu_chess.dir\view
+  TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
+  TARGET_PDB = src\kungfu_chess.pdb
+
 build src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj: CXX_COMPILER__kungfu_chess_Debug C$:\kungfu_chess\src\texttests\ScriptRunner.cpp || cmake_object_order_depends_target_kungfu_chess
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
   INCLUDES = -IC:\kungfu_chess\src
@@ -231,7 +247,7 @@ build src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj: CXX_COMPIL
 #############################################
 # Link the static library src\kungfu_chess.lib
 
-build src\kungfu_chess.lib: CXX_STATIC_LIBRARY_LINKER__kungfu_chess_Debug src\CMakeFiles\kungfu_chess.dir\model\position.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\piece.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\board.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardParser.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\boardMapper.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\controller.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\pieceRules.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\ruleEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\motion.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\realTimeArbiter.cpp.obj src\CMakeFiles\kungfu_chess.dir\engine\gameEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj
+build src\kungfu_chess.lib: CXX_STATIC_LIBRARY_LINKER__kungfu_chess_Debug src\CMakeFiles\kungfu_chess.dir\model\position.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\piece.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\board.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardParser.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\boardMapper.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\controller.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\pieceRules.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\ruleEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\motion.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\realTimeArbiter.cpp.obj src\CMakeFiles\kungfu_chess.dir\engine\gameEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\view\renderer.cpp.obj src\CMakeFiles\kungfu_chess.dir\view\gameView.cpp.obj src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir
@@ -961,6 +977,191 @@ build tests\unit\GameEngineTest.exe: CXX_EXECUTABLE_LINKER__GameEngineTest_Debug
   TARGET_IMPLIB = tests\unit\GameEngineTest.lib
   TARGET_PDB = tests\unit\GameEngineTest.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target MotionTest
+
+
+#############################################
+# Order-only phony target for MotionTest
+
+build cmake_object_order_depends_target_MotionTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_kungfu_chess
+
+build tests\unit\CMakeFiles\MotionTest.dir\motionTest.cpp.obj: CXX_COMPILER__MotionTest_Debug C$:\kungfu_chess\tests\unit\motionTest.cpp || cmake_object_order_depends_target_MotionTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src -external:I C:\kungfu_chess\external\googletest\googletest\include -external:I C:\kungfu_chess\external\googletest\googletest -external:W0
+  OBJECT_DIR = tests\unit\CMakeFiles\MotionTest.dir
+  OBJECT_FILE_DIR = tests\unit\CMakeFiles\MotionTest.dir
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\MotionTest.dir\
+  TARGET_PDB = tests\unit\MotionTest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MotionTest
+
+
+#############################################
+# Link the executable tests\unit\MotionTest.exe
+
+build tests\unit\MotionTest.exe: CXX_EXECUTABLE_LINKER__MotionTest_Debug tests\unit\CMakeFiles\MotionTest.dir\motionTest.cpp.obj | src\kungfu_chess.lib lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib src\kungfu_chess.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = src\kungfu_chess.lib  lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = tests\unit\CMakeFiles\MotionTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\MotionTest.dir\
+  TARGET_FILE = tests\unit\MotionTest.exe
+  TARGET_IMPLIB = tests\unit\MotionTest.lib
+  TARGET_PDB = tests\unit\MotionTest.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target RealTimeArbiterTest
+
+
+#############################################
+# Order-only phony target for RealTimeArbiterTest
+
+build cmake_object_order_depends_target_RealTimeArbiterTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_kungfu_chess
+
+build tests\unit\CMakeFiles\RealTimeArbiterTest.dir\realTimeArbiterTest.cpp.obj: CXX_COMPILER__RealTimeArbiterTest_Debug C$:\kungfu_chess\tests\unit\realTimeArbiterTest.cpp || cmake_object_order_depends_target_RealTimeArbiterTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src -external:I C:\kungfu_chess\external\googletest\googletest\include -external:I C:\kungfu_chess\external\googletest\googletest -external:W0
+  OBJECT_DIR = tests\unit\CMakeFiles\RealTimeArbiterTest.dir
+  OBJECT_FILE_DIR = tests\unit\CMakeFiles\RealTimeArbiterTest.dir
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\RealTimeArbiterTest.dir\
+  TARGET_PDB = tests\unit\RealTimeArbiterTest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target RealTimeArbiterTest
+
+
+#############################################
+# Link the executable tests\unit\RealTimeArbiterTest.exe
+
+build tests\unit\RealTimeArbiterTest.exe: CXX_EXECUTABLE_LINKER__RealTimeArbiterTest_Debug tests\unit\CMakeFiles\RealTimeArbiterTest.dir\realTimeArbiterTest.cpp.obj | src\kungfu_chess.lib lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib src\kungfu_chess.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = src\kungfu_chess.lib  lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = tests\unit\CMakeFiles\RealTimeArbiterTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\RealTimeArbiterTest.dir\
+  TARGET_FILE = tests\unit\RealTimeArbiterTest.exe
+  TARGET_IMPLIB = tests\unit\RealTimeArbiterTest.lib
+  TARGET_PDB = tests\unit\RealTimeArbiterTest.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GameSnapshotTest
+
+
+#############################################
+# Order-only phony target for GameSnapshotTest
+
+build cmake_object_order_depends_target_GameSnapshotTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_kungfu_chess
+
+build tests\unit\CMakeFiles\GameSnapshotTest.dir\gameSnapshotTest.cpp.obj: CXX_COMPILER__GameSnapshotTest_Debug C$:\kungfu_chess\tests\unit\gameSnapshotTest.cpp || cmake_object_order_depends_target_GameSnapshotTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src -external:I C:\kungfu_chess\external\googletest\googletest\include -external:I C:\kungfu_chess\external\googletest\googletest -external:W0
+  OBJECT_DIR = tests\unit\CMakeFiles\GameSnapshotTest.dir
+  OBJECT_FILE_DIR = tests\unit\CMakeFiles\GameSnapshotTest.dir
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\GameSnapshotTest.dir\
+  TARGET_PDB = tests\unit\GameSnapshotTest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GameSnapshotTest
+
+
+#############################################
+# Link the executable tests\unit\GameSnapshotTest.exe
+
+build tests\unit\GameSnapshotTest.exe: CXX_EXECUTABLE_LINKER__GameSnapshotTest_Debug tests\unit\CMakeFiles\GameSnapshotTest.dir\gameSnapshotTest.cpp.obj | src\kungfu_chess.lib lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib src\kungfu_chess.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = src\kungfu_chess.lib  lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = tests\unit\CMakeFiles\GameSnapshotTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\GameSnapshotTest.dir\
+  TARGET_FILE = tests\unit\GameSnapshotTest.exe
+  TARGET_IMPLIB = tests\unit\GameSnapshotTest.lib
+  TARGET_PDB = tests\unit\GameSnapshotTest.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target RendererTest
+
+
+#############################################
+# Order-only phony target for RendererTest
+
+build cmake_object_order_depends_target_RendererTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_kungfu_chess
+
+build tests\unit\CMakeFiles\RendererTest.dir\rendererTest.cpp.obj: CXX_COMPILER__RendererTest_Debug C$:\kungfu_chess\tests\unit\rendererTest.cpp || cmake_object_order_depends_target_RendererTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src -external:I C:\kungfu_chess\external\googletest\googletest\include -external:I C:\kungfu_chess\external\googletest\googletest -external:W0
+  OBJECT_DIR = tests\unit\CMakeFiles\RendererTest.dir
+  OBJECT_FILE_DIR = tests\unit\CMakeFiles\RendererTest.dir
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\RendererTest.dir\
+  TARGET_PDB = tests\unit\RendererTest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target RendererTest
+
+
+#############################################
+# Link the executable tests\unit\RendererTest.exe
+
+build tests\unit\RendererTest.exe: CXX_EXECUTABLE_LINKER__RendererTest_Debug tests\unit\CMakeFiles\RendererTest.dir\rendererTest.cpp.obj | src\kungfu_chess.lib lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib src\kungfu_chess.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = src\kungfu_chess.lib  lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = tests\unit\CMakeFiles\RendererTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\RendererTest.dir\
+  TARGET_FILE = tests\unit\RendererTest.exe
+  TARGET_IMPLIB = tests\unit\RendererTest.lib
+  TARGET_PDB = tests\unit\RendererTest.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GameViewTest
+
+
+#############################################
+# Order-only phony target for GameViewTest
+
+build cmake_object_order_depends_target_GameViewTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_kungfu_chess
+
+build tests\unit\CMakeFiles\GameViewTest.dir\gameViewTest.cpp.obj: CXX_COMPILER__GameViewTest_Debug C$:\kungfu_chess\tests\unit\gameViewTest.cpp || cmake_object_order_depends_target_GameViewTest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src -external:I C:\kungfu_chess\external\googletest\googletest\include -external:I C:\kungfu_chess\external\googletest\googletest -external:W0
+  OBJECT_DIR = tests\unit\CMakeFiles\GameViewTest.dir
+  OBJECT_FILE_DIR = tests\unit\CMakeFiles\GameViewTest.dir
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\GameViewTest.dir\
+  TARGET_PDB = tests\unit\GameViewTest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GameViewTest
+
+
+#############################################
+# Link the executable tests\unit\GameViewTest.exe
+
+build tests\unit\GameViewTest.exe: CXX_EXECUTABLE_LINKER__GameViewTest_Debug tests\unit\CMakeFiles\GameViewTest.dir\gameViewTest.cpp.obj | src\kungfu_chess.lib lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib src\kungfu_chess.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = src\kungfu_chess.lib  lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = tests\unit\CMakeFiles\GameViewTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = tests\unit\CMakeFiles\GameViewTest.dir\
+  TARGET_FILE = tests\unit\GameViewTest.exe
+  TARGET_IMPLIB = tests\unit\GameViewTest.lib
+  TARGET_PDB = tests\unit\GameViewTest.pdb
+
 
 #############################################
 # Utility command for test
@@ -1160,6 +1361,18 @@ build GameEngineTest: phony tests\unit\GameEngineTest.exe
 
 build GameEngineTest.exe: phony tests\unit\GameEngineTest.exe
 
+build GameSnapshotTest: phony tests\unit\GameSnapshotTest.exe
+
+build GameSnapshotTest.exe: phony tests\unit\GameSnapshotTest.exe
+
+build GameViewTest: phony tests\unit\GameViewTest.exe
+
+build GameViewTest.exe: phony tests\unit\GameViewTest.exe
+
+build MotionTest: phony tests\unit\MotionTest.exe
+
+build MotionTest.exe: phony tests\unit\MotionTest.exe
+
 build PieceRulesTest: phony tests\unit\PieceRulesTest.exe
 
 build PieceRulesTest.exe: phony tests\unit\PieceRulesTest.exe
@@ -1171,6 +1384,14 @@ build PieceTest.exe: phony tests\unit\PieceTest.exe
 build PositionTest: phony tests\unit\PositionTest.exe
 
 build PositionTest.exe: phony tests\unit\PositionTest.exe
+
+build RealTimeArbiterTest: phony tests\unit\RealTimeArbiterTest.exe
+
+build RealTimeArbiterTest.exe: phony tests\unit\RealTimeArbiterTest.exe
+
+build RendererTest: phony tests\unit\RendererTest.exe
+
+build RendererTest.exe: phony tests\unit\RendererTest.exe
 
 build RuleEngineTest: phony tests\unit\RuleEngineTest.exe
 
@@ -1242,7 +1463,7 @@ build tests\integration\all: phony tests\integration\ScriptRunnerTest.exe
 #############################################
 # Folder: C:/kungfu_chess/out/build/x64-Debug/tests/unit
 
-build tests\unit\all: phony tests\unit\PositionTest.exe tests\unit\PieceTest.exe tests\unit\BoardTest.exe tests\unit\BoardParserTest.exe tests\unit\BoardPrinterTest.exe tests\unit\BoardMapperTest.exe tests\unit\ControllerTest.exe tests\unit\PieceRulesTest.exe tests\unit\RuleEngineTest.exe tests\unit\GameEngineTest.exe
+build tests\unit\all: phony tests\unit\PositionTest.exe tests\unit\PieceTest.exe tests\unit\BoardTest.exe tests\unit\BoardParserTest.exe tests\unit\BoardPrinterTest.exe tests\unit\BoardMapperTest.exe tests\unit\ControllerTest.exe tests\unit\PieceRulesTest.exe tests\unit\RuleEngineTest.exe tests\unit\GameEngineTest.exe tests\unit\MotionTest.exe tests\unit\RealTimeArbiterTest.exe tests\unit\GameSnapshotTest.exe tests\unit\RendererTest.exe tests\unit\GameViewTest.exe
 
 # =============================================================================
 # Built-in targets

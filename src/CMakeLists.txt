@@ -17,6 +17,9 @@ add_library(kungfu_chess
 
     engine/gameEngine.cpp
 
+    view/renderer.cpp
+    view/gameView.cpp
+
     texttests/ScriptRunner.cpp
 )
 
