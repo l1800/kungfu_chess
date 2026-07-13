@@ -6,6 +6,15 @@
 
 #include <optional>
 
+struct ArrivalEvents
+{
+    bool motionCompleted = false;
+    bool pieceCaptured = false;
+    bool kingCaptured = false;
+
+    std::optional<int> capturedPieceId;
+};
+
 class RealTimeArbiter
 {
 public:
@@ -18,13 +27,12 @@ public:
         const Position& destination
     );
 
-    void advanceTime(int milliseconds);
+    ArrivalEvents advanceTime(int milliseconds);
 
-    const std::optional<Motion>&
-        activeMotion() const;
+    const std::optional<Motion>& activeMotion() const;
 
 private:
-    void completeActiveMotion();
+    ArrivalEvents completeActiveMotion();
 
     Board& board_;
     std::optional<Motion> activeMotion_;

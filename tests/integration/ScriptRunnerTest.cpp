@@ -6,30 +6,32 @@
 
 TEST(
     ScriptRunnerTest,
-    RookMovesOnlyAfterEnoughTime
+    KingCaptureEndsGameAndBlocksFurtherMoves
 )
 {
     const std::string script =
         "Board\n"
-        ". wR .\n"
+        "wR . bK\n"
+        ". . wN\n"
         ". . .\n"
-        ". . bK\n"
         "\n"
-        "click 150 50\n"
-        "click 150 250\n"
-        "wait 1000\n"
+        "click 50 50\n"
+        "click 250 50\n"
+        "wait 2000\n"
         "print board\n"
-        "wait 1000\n"
+        "click 250 150\n"
+        "click 50 250\n"
+        "wait 2000\n"
         "print board\n";
 
     const std::string expected =
-        ". wR .\n"
+        ". . wR\n"
+        ". . wN\n"
         ". . .\n"
-        ". . bK\n"
         "\n"
-        ". . .\n"
-        ". . .\n"
-        ". wR bK";
+        ". . wR\n"
+        ". . wN\n"
+        ". . .";
 
     EXPECT_EQ(
         ScriptRunner::run(script),

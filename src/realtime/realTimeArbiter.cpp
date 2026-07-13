@@ -42,7 +42,9 @@ void RealTimeArbiter::startMotion(
     );
 }
 
-void RealTimeArbiter::advanceTime(int milliseconds)
+ArrivalEvents RealTimeArbiter::advanceTime(
+    int milliseconds
+)
 {
     if (milliseconds < 0)
     {
@@ -53,15 +55,17 @@ void RealTimeArbiter::advanceTime(int milliseconds)
 
     if (!activeMotion_.has_value())
     {
-        return;
+        return {};
     }
 
     activeMotion_->advance(milliseconds);
 
-    if (activeMotion_->isComplete())
+    if (!activeMotion_->isComplete())
     {
-        completeActiveMotion();
+        return {};
     }
+
+    return completeActiveMotion();
 }
 
 const std::optional<Motion>&
@@ -70,11 +74,12 @@ RealTimeArbiter::activeMotion() const
     return activeMotion_;
 }
 
-void RealTimeArbiter::completeActiveMotion()
+ArrivalEvents
+RealTimeArbiter::completeActiveMotion()
 {
     if (!activeMotion_.has_value())
     {
-        return;
+        return {};
     }
 
     const Position source =
@@ -83,11 +88,45 @@ void RealTimeArbiter::completeActiveMotion()
     const Position destination =
         activeMotion_->destination();
 
+    Piece* movingPiece =
+        board_.getPieceAt(source);
+
+    if (movingPiece == nullptr)
+    {
+        throw std::logic_error(
+            "moving_piece_missing"
+        );
+    }
+
+    ArrivalEvents events;
+    events.motionCompleted = true;
+
+    Piece* destinationPiece =
+        board_.getPieceAt(destination);
+
+    if (destinationPiece != nullptr)
+    {
+        events.pieceCaptured = true;
+        events.capturedPieceId =
+            destinationPiece->id();
+
+        events.kingCaptured =
+            destinationPiece->kind() ==
+            PieceKind::King;
+
+        /*
+         * באיטרציה 6 האכילה קורית רק בהגעה.
+         */
+        board_.removePiece(destination);
+    }
+
     /*
-     * באיטרציה 5 היעד חייב להיות ריק.
-     * אכילה תתווסף באיטרציה 6.
+     * אחרי שהיעד נוקה, אפשר להזיז את הכלי.
      */
-    board_.movePiece(source, destination);
+    board_.movePiece(
+        source,
+        destination
+    );
 
     Piece* arrivedPiece =
         board_.getPieceAt(destination);
@@ -99,7 +138,11 @@ void RealTimeArbiter::completeActiveMotion()
         );
     }
 
-    arrivedPiece->setState(PieceState::Idle);
+    arrivedPiece->setState(
+        PieceState::Idle
+    );
 
     activeMotion_.reset();
+
+    return events;
 }

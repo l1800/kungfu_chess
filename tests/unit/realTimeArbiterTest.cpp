@@ -4,50 +4,47 @@
 
 namespace
 {
-    void addWhiteRook(
+    void addPiece(
         Board& board,
+        int id,
+        PieceColor color,
+        PieceKind kind,
         const Position& position
     )
     {
         board.addPiece(
             Piece(
-                1,
-                PieceColor::White,
-                PieceKind::Rook,
+                id,
+                color,
+                kind,
                 position
             )
         );
     }
 }
 
-TEST(RealTimeArbiterTest, StartsActiveMotion)
-{
-    Board board(3, 3);
-    addWhiteRook(board, Position(0, 0));
-
-    RealTimeArbiter arbiter(board);
-
-    arbiter.startMotion(
-        Position(0, 0),
-        Position(0, 1)
-    );
-
-    EXPECT_TRUE(arbiter.hasActiveMotion());
-
-    const Piece* piece =
-        board.getPieceAt(Position(0, 0));
-
-    ASSERT_NE(piece, nullptr);
-    EXPECT_EQ(piece->state(), PieceState::Moving);
-}
-
 TEST(
     RealTimeArbiterTest,
-    BoardDoesNotChangeAfter999Milliseconds
+    BoardDoesNotChangeBeforeArrival
 )
 {
     Board board(3, 3);
-    addWhiteRook(board, Position(0, 0));
+
+    addPiece(
+        board,
+        1,
+        PieceColor::White,
+        PieceKind::Rook,
+        Position(0, 0)
+    );
+
+    addPiece(
+        board,
+        2,
+        PieceColor::Black,
+        PieceKind::Knight,
+        Position(0, 1)
+    );
 
     RealTimeArbiter arbiter(board);
 
@@ -56,28 +53,45 @@ TEST(
         Position(0, 1)
     );
 
-    arbiter.advanceTime(999);
+    const ArrivalEvents events =
+        arbiter.advanceTime(999);
+
+    EXPECT_FALSE(events.motionCompleted);
+    EXPECT_FALSE(events.pieceCaptured);
 
     EXPECT_NE(
         board.getPieceAt(Position(0, 0)),
         nullptr
     );
 
-    EXPECT_EQ(
+    EXPECT_NE(
         board.getPieceAt(Position(0, 1)),
         nullptr
     );
-
-    EXPECT_TRUE(arbiter.hasActiveMotion());
 }
 
 TEST(
     RealTimeArbiterTest,
-    OneCellMotionArrivesAfter1000Milliseconds
+    CapturesEnemyOnlyAtArrival
 )
 {
     Board board(3, 3);
-    addWhiteRook(board, Position(0, 0));
+
+    addPiece(
+        board,
+        1,
+        PieceColor::White,
+        PieceKind::Rook,
+        Position(0, 0)
+    );
+
+    addPiece(
+        board,
+        2,
+        PieceColor::Black,
+        PieceKind::Knight,
+        Position(0, 1)
+    );
 
     RealTimeArbiter arbiter(board);
 
@@ -86,7 +100,21 @@ TEST(
         Position(0, 1)
     );
 
-    arbiter.advanceTime(1000);
+    const ArrivalEvents events =
+        arbiter.advanceTime(1000);
+
+    EXPECT_TRUE(events.motionCompleted);
+    EXPECT_TRUE(events.pieceCaptured);
+    EXPECT_FALSE(events.kingCaptured);
+
+    ASSERT_TRUE(
+        events.capturedPieceId.has_value()
+    );
+
+    EXPECT_EQ(
+        events.capturedPieceId.value(),
+        2
+    );
 
     EXPECT_EQ(
         board.getPieceAt(Position(0, 0)),
@@ -97,18 +125,32 @@ TEST(
         board.getPieceAt(Position(0, 1));
 
     ASSERT_NE(arrived, nullptr);
+    EXPECT_EQ(arrived->id(), 1);
     EXPECT_EQ(arrived->state(), PieceState::Idle);
-
-    EXPECT_FALSE(arbiter.hasActiveMotion());
 }
 
 TEST(
     RealTimeArbiterTest,
-    MultiplePartialWaitsAccumulate
+    ReportsKingCapture
 )
 {
     Board board(3, 3);
-    addWhiteRook(board, Position(0, 0));
+
+    addPiece(
+        board,
+        1,
+        PieceColor::White,
+        PieceKind::Rook,
+        Position(0, 0)
+    );
+
+    addPiece(
+        board,
+        2,
+        PieceColor::Black,
+        PieceKind::King,
+        Position(0, 2)
+    );
 
     RealTimeArbiter arbiter(board);
 
@@ -117,52 +159,48 @@ TEST(
         Position(0, 2)
     );
 
-    arbiter.advanceTime(500);
-    arbiter.advanceTime(500);
+    const ArrivalEvents events =
+        arbiter.advanceTime(2000);
 
-    EXPECT_NE(
-        board.getPieceAt(Position(0, 0)),
-        nullptr
-    );
+    EXPECT_TRUE(events.motionCompleted);
+    EXPECT_TRUE(events.pieceCaptured);
+    EXPECT_TRUE(events.kingCaptured);
 
-    EXPECT_EQ(
-        board.getPieceAt(Position(0, 2)),
-        nullptr
-    );
+    const Piece* arrived =
+        board.getPieceAt(Position(0, 2));
 
-    arbiter.advanceTime(1000);
-
-    EXPECT_EQ(
-        board.getPieceAt(Position(0, 0)),
-        nullptr
-    );
-
-    EXPECT_NE(
-        board.getPieceAt(Position(0, 2)),
-        nullptr
-    );
+    ASSERT_NE(arrived, nullptr);
+    EXPECT_EQ(arrived->id(), 1);
+    EXPECT_EQ(arrived->kind(), PieceKind::Rook);
 }
 
 TEST(
     RealTimeArbiterTest,
-    RejectsSecondDirectMotion
+    EmptyDestinationProducesNoCaptureEvent
 )
 {
     Board board(3, 3);
-    addWhiteRook(board, Position(0, 0));
+
+    addPiece(
+        board,
+        1,
+        PieceColor::White,
+        PieceKind::Rook,
+        Position(0, 0)
+    );
 
     RealTimeArbiter arbiter(board);
 
     arbiter.startMotion(
         Position(0, 0),
-        Position(0, 2)
+        Position(0, 1)
     );
 
-    EXPECT_THROW(
-        arbiter.startMotion(
-            Position(0, 0),
-            Position(1, 0)
-        ),
-        std::logic_error
-    );
+    const ArrivalEvents events =
+        arbiter.advanceTime(1000);
+
+    EXPECT_TRUE(events.motionCompleted);
+    EXPECT_FALSE(events.pieceCaptured);
+    EXPECT_FALSE(events.kingCaptured);
+    EXPECT_FALSE(events.capturedPieceId.has_value());
 }

@@ -61,7 +61,15 @@ MoveResult GameEngine::requestMove(
 
 void GameEngine::wait(int milliseconds)
 {
-    realTimeArbiter_.advanceTime(milliseconds);
+    const ArrivalEvents events =
+        realTimeArbiter_.advanceTime(
+            milliseconds
+        );
+
+    if (events.kingCaptured)
+    {
+        gameOver_ = true;
+    }
 }
 
 bool GameEngine::isGameOver() const
