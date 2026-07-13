@@ -22,11 +22,8 @@ public:
 
     mutable bool called = false;
 
-    mutable std::optional<Position>
-        receivedSource;
-
-    mutable std::optional<Position>
-        receivedDestination;
+    mutable std::optional<Position> receivedSource;
+    mutable std::optional<Position> receivedDestination;
 
     MoveValidation resultToReturn{
         true,
@@ -139,10 +136,6 @@ TEST(
 
     EXPECT_FALSE(result.isAccepted);
     EXPECT_EQ(result.reason, "game_over");
-
-    /*
-     * GameEngine דוחה לפני RuleEngine.
-     */
     EXPECT_FALSE(ruleEngine.called);
 }
 
@@ -194,4 +187,166 @@ TEST(
 
     ASSERT_NE(arrived, nullptr);
     EXPECT_EQ(arrived->id(), 1);
+}
+
+TEST(
+    GameEngineTest,
+    IllegalMoveDoesNotStartMotion
+)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    FakeRuleEngine ruleEngine;
+
+    ruleEngine.resultToReturn = {
+        false,
+        "illegal_piece_move"
+    };
+
+    RealTimeArbiter arbiter(board);
+
+    GameEngine engine(
+        board,
+        ruleEngine,
+        arbiter
+    );
+
+    const MoveResult result =
+        engine.requestMove(
+            Position(0, 0),
+            Position(1, 1)
+        );
+
+    EXPECT_FALSE(result.isAccepted);
+
+    EXPECT_EQ(
+        result.reason,
+        "illegal_piece_move"
+    );
+
+    EXPECT_FALSE(
+        arbiter.hasActiveMotion()
+    );
+
+    EXPECT_NE(
+        board.getPieceAt(Position(0, 0)),
+        nullptr
+    );
+
+    EXPECT_EQ(
+        board.getPieceAt(Position(1, 1)),
+        nullptr
+    );
+}
+
+TEST(
+    GameEngineTest,
+    MotionInProgressRejectsBeforeValidation
+)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    FakeRuleEngine ruleEngine;
+    RealTimeArbiter arbiter(board);
+
+    GameEngine engine(
+        board,
+        ruleEngine,
+        arbiter
+    );
+
+    const MoveResult first =
+        engine.requestMove(
+            Position(0, 0),
+            Position(0, 2)
+        );
+
+    ASSERT_TRUE(first.isAccepted);
+    ASSERT_TRUE(arbiter.hasActiveMotion());
+
+    ruleEngine.called = false;
+
+    const MoveResult second =
+        engine.requestMove(
+            Position(0, 0),
+            Position(1, 0)
+        );
+
+    EXPECT_FALSE(second.isAccepted);
+
+    EXPECT_EQ(
+        second.reason,
+        "motion_in_progress"
+    );
+
+    EXPECT_FALSE(ruleEngine.called);
+}
+
+TEST(
+    GameEngineTest,
+    GameOverHasPriorityOverMotionInProgress
+)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    FakeRuleEngine ruleEngine;
+    RealTimeArbiter arbiter(board);
+
+    GameEngine engine(
+        board,
+        ruleEngine,
+        arbiter
+    );
+
+    engine.requestMove(
+        Position(0, 0),
+        Position(0, 2)
+    );
+
+    ASSERT_TRUE(arbiter.hasActiveMotion());
+
+    engine.setGameOver(true);
+    ruleEngine.called = false;
+
+    const MoveResult result =
+        engine.requestMove(
+            Position(0, 0),
+            Position(1, 0)
+        );
+
+    EXPECT_FALSE(result.isAccepted);
+
+    EXPECT_EQ(
+        result.reason,
+        "game_over"
+    );
+
+    EXPECT_FALSE(ruleEngine.called);
 }

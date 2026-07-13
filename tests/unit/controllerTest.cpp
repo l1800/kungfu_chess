@@ -3,6 +3,7 @@
 #include "../../src/input/controller.hpp"
 
 #include <optional>
+
 class FakeGameEngine : public GameEngine
 {
 public:
@@ -33,18 +34,19 @@ public:
 
     bool called = false;
 
-    std::optional<Position>
-        receivedSource;
-
-    std::optional<Position>
-        receivedDestination;
+    std::optional<Position> receivedSource;
+    std::optional<Position> receivedDestination;
 
     MoveResult resultToReturn{
         true,
         "ok"
     };
 };
-TEST(ControllerTest, FirstClickOnPieceSelectsIt)
+
+TEST(
+    ControllerTest,
+    FirstClickOnPieceSelectsIt
+)
 {
     Board board(3, 3);
 
@@ -65,6 +67,7 @@ TEST(ControllerTest, FirstClickOnPieceSelectsIt)
         ruleEngine,
         arbiter
     );
+
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -75,7 +78,9 @@ TEST(ControllerTest, FirstClickOnPieceSelectsIt)
 
     controller.click(150, 150);
 
-    ASSERT_TRUE(controller.selectedCell().has_value());
+    ASSERT_TRUE(
+        controller.selectedCell().has_value()
+    );
 
     EXPECT_EQ(
         controller.selectedCell().value(),
@@ -85,7 +90,10 @@ TEST(ControllerTest, FirstClickOnPieceSelectsIt)
     EXPECT_FALSE(gameEngine.called);
 }
 
-TEST(ControllerTest, FirstClickOnEmptyCellIsIgnored)
+TEST(
+    ControllerTest,
+    FirstClickOnEmptyCellIsIgnored
+)
 {
     Board board(3, 3);
     RuleEngine ruleEngine;
@@ -96,6 +104,7 @@ TEST(ControllerTest, FirstClickOnEmptyCellIsIgnored)
         ruleEngine,
         arbiter
     );
+
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -106,11 +115,17 @@ TEST(ControllerTest, FirstClickOnEmptyCellIsIgnored)
 
     controller.click(50, 50);
 
-    EXPECT_FALSE(controller.selectedCell().has_value());
+    EXPECT_FALSE(
+        controller.selectedCell().has_value()
+    );
+
     EXPECT_FALSE(gameEngine.called);
 }
 
-TEST(ControllerTest, OutsideClickWithoutSelectionIsIgnored)
+TEST(
+    ControllerTest,
+    OutsideClickWithoutSelectionIsIgnored
+)
 {
     Board board(3, 3);
     RuleEngine ruleEngine;
@@ -121,6 +136,7 @@ TEST(ControllerTest, OutsideClickWithoutSelectionIsIgnored)
         ruleEngine,
         arbiter
     );
+
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -129,13 +145,20 @@ TEST(ControllerTest, OutsideClickWithoutSelectionIsIgnored)
         gameEngine
     );
 
+    controller.click(-10, 50);
     controller.click(350, 50);
 
-    EXPECT_FALSE(controller.selectedCell().has_value());
+    EXPECT_FALSE(
+        controller.selectedCell().has_value()
+    );
+
     EXPECT_FALSE(gameEngine.called);
 }
 
-TEST(ControllerTest, SecondInsideClickRequestsMove)
+TEST(
+    ControllerTest,
+    SecondInsideClickRequestsMove
+)
 {
     Board board(3, 3);
 
@@ -156,6 +179,7 @@ TEST(ControllerTest, SecondInsideClickRequestsMove)
         ruleEngine,
         arbiter
     );
+
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -169,8 +193,13 @@ TEST(ControllerTest, SecondInsideClickRequestsMove)
 
     EXPECT_TRUE(gameEngine.called);
 
-    ASSERT_TRUE(gameEngine.receivedSource.has_value());
-    ASSERT_TRUE(gameEngine.receivedDestination.has_value());
+    ASSERT_TRUE(
+        gameEngine.receivedSource.has_value()
+    );
+
+    ASSERT_TRUE(
+        gameEngine.receivedDestination.has_value()
+    );
 
     EXPECT_EQ(
         gameEngine.receivedSource.value(),
@@ -182,10 +211,15 @@ TEST(ControllerTest, SecondInsideClickRequestsMove)
         Position(1, 2)
     );
 
-    EXPECT_FALSE(controller.selectedCell().has_value());
+    EXPECT_FALSE(
+        controller.selectedCell().has_value()
+    );
 }
 
-TEST(ControllerTest, RejectedMoveStillClearsSelection)
+TEST(
+    ControllerTest,
+    RejectedMoveStillClearsSelection
+)
 {
     Board board(3, 3);
 
@@ -224,10 +258,16 @@ TEST(ControllerTest, RejectedMoveStillClearsSelection)
     controller.click(150, 150);
 
     EXPECT_TRUE(gameEngine.called);
-    EXPECT_FALSE(controller.selectedCell().has_value());
+
+    EXPECT_FALSE(
+        controller.selectedCell().has_value()
+    );
 }
 
-TEST(ControllerTest, OutsideClickWithSelectionCancelsSelection)
+TEST(
+    ControllerTest,
+    OutsideClickWithSelectionCancelsSelection
+)
 {
     Board board(3, 3);
 
@@ -248,6 +288,7 @@ TEST(ControllerTest, OutsideClickWithSelectionCancelsSelection)
         ruleEngine,
         arbiter
     );
+
     BoardMapper mapper(3, 3);
 
     Controller controller(
@@ -258,10 +299,15 @@ TEST(ControllerTest, OutsideClickWithSelectionCancelsSelection)
 
     controller.click(50, 50);
 
-    ASSERT_TRUE(controller.selectedCell().has_value());
+    ASSERT_TRUE(
+        controller.selectedCell().has_value()
+    );
 
     controller.click(350, 50);
 
-    EXPECT_FALSE(controller.selectedCell().has_value());
+    EXPECT_FALSE(
+        controller.selectedCell().has_value()
+    );
+
     EXPECT_FALSE(gameEngine.called);
 }

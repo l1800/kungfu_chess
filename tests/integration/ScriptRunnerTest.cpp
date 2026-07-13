@@ -161,3 +161,55 @@ TEST(ScriptRunnerTest, WhitePawnMovesOneSquareForward)
         expected
     );
 }
+TEST(
+    ScriptRunnerTest,
+    BlockedRookMoveLeavesBoardUnchanged
+)
+{
+    const std::string script =
+        "Board\n"
+        "wR wP .\n"
+        ". . .\n"
+        ". . bK\n"
+        "\n"
+        "click 50 50\n"
+        "click 250 50\n"
+        "wait 3000\n"
+        "print board\n";
+
+    const std::string expected =
+        "wR wP .\n"
+        ". . .\n"
+        ". . bK";
+
+    EXPECT_EQ(
+        ScriptRunner::run(script),
+        expected
+    );
+}
+TEST(
+    ScriptRunnerTest,
+    FriendlyDestinationLeavesBoardUnchanged
+)
+{
+    const std::string script =
+        "Board\n"
+        "wR . wP\n"
+        ". . .\n"
+        ". . bK\n"
+        "\n"
+        "click 50 50\n"
+        "click 250 50\n"
+        "wait 2000\n"
+        "print board\n";
+
+    const std::string expected =
+        "wR . wP\n"
+        ". . .\n"
+        ". . bK";
+
+    EXPECT_EQ(
+        ScriptRunner::run(script),
+        expected
+    );
+}

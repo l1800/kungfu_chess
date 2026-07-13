@@ -62,9 +62,7 @@ MoveResult GameEngine::requestMove(
 void GameEngine::wait(int milliseconds)
 {
     const ArrivalEvents events =
-        realTimeArbiter_.advanceTime(
-            milliseconds
-        );
+        realTimeArbiter_.advanceTime(milliseconds);
 
     if (events.kingCaptured)
     {

@@ -158,3 +158,194 @@ TEST(RuleEngineTest, DoesNotChangeBoard)
         nullptr
     );
 }
+TEST(
+    RuleEngineTest,
+    ReturnsOutsideBoardForInvalidSource
+)
+{
+    const Board board(3, 3);
+    const RuleEngine ruleEngine;
+
+    const MoveValidation result =
+        ruleEngine.validateMove(
+            board,
+            Position(-1, 0),
+            Position(0, 0)
+        );
+
+    EXPECT_FALSE(result.isValid);
+    EXPECT_EQ(
+        result.reason,
+        "outside_board"
+    );
+}
+TEST(
+    RuleEngineTest,
+    ReturnsOutsideBoardForInvalidDestination
+)
+{
+    const Board board(3, 3);
+    const RuleEngine ruleEngine;
+
+    const MoveValidation result =
+        ruleEngine.validateMove(
+            board,
+            Position(0, 0),
+            Position(3, 0)
+        );
+
+    EXPECT_FALSE(result.isValid);
+    EXPECT_EQ(
+        result.reason,
+        "outside_board"
+    );
+}
+TEST(
+    RuleEngineTest,
+    ReturnsEmptySourceForEmptyCell
+)
+{
+    const Board board(3, 3);
+    const RuleEngine ruleEngine;
+
+    const MoveValidation result =
+        ruleEngine.validateMove(
+            board,
+            Position(0, 0),
+            Position(0, 2)
+        );
+
+    EXPECT_FALSE(result.isValid);
+    EXPECT_EQ(
+        result.reason,
+        "empty_source"
+    );
+}
+TEST(
+    RuleEngineTest,
+    ReturnsFriendlyDestination
+)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    board.addPiece(
+        Piece(
+            2,
+            PieceColor::White,
+            PieceKind::Pawn,
+            Position(0, 2)
+        )
+    );
+
+    const RuleEngine ruleEngine;
+
+    const MoveValidation result =
+        ruleEngine.validateMove(
+            board,
+            Position(0, 0),
+            Position(0, 2)
+        );
+
+    EXPECT_FALSE(result.isValid);
+    EXPECT_EQ(
+        result.reason,
+        "friendly_destination"
+    );
+}
+TEST(
+    RuleEngineTest,
+    ReturnsIllegalPieceMoveForIllegalGeometry
+)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    const RuleEngine ruleEngine;
+
+    const MoveValidation result =
+        ruleEngine.validateMove(
+            board,
+            Position(0, 0),
+            Position(1, 1)
+        );
+
+    EXPECT_FALSE(result.isValid);
+    EXPECT_EQ(
+        result.reason,
+        "illegal_piece_move"
+    );
+}
+TEST(
+    RuleEngineTest,
+    BlockedSlidingMoveLeavesBoardUnchanged
+)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    board.addPiece(
+        Piece(
+            2,
+            PieceColor::White,
+            PieceKind::Pawn,
+            Position(0, 1)
+        )
+    );
+
+    const RuleEngine ruleEngine;
+
+    const MoveValidation result =
+        ruleEngine.validateMove(
+            board,
+            Position(0, 0),
+            Position(0, 2)
+        );
+
+    EXPECT_FALSE(result.isValid);
+    EXPECT_EQ(
+        result.reason,
+        "illegal_piece_move"
+    );
+
+    const Piece* rook =
+        board.getPieceAt(Position(0, 0));
+
+    const Piece* pawn =
+        board.getPieceAt(Position(0, 1));
+
+    ASSERT_NE(rook, nullptr);
+    ASSERT_NE(pawn, nullptr);
+
+    EXPECT_EQ(rook->id(), 1);
+    EXPECT_EQ(pawn->id(), 2);
+
+    EXPECT_EQ(
+        board.getPieceAt(Position(0, 2)),
+        nullptr
+    );
+}

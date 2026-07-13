@@ -38,6 +38,5 @@ private:
     Board& board_;
     RuleEngine& ruleEngine_;
     RealTimeArbiter& realTimeArbiter_;
-
     bool gameOver_;
 };
