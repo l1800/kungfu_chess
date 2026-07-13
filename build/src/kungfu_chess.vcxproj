@@ -277,6 +277,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\kungfu_chess\src\view\renderer.cpp" />
     <ClCompile Include="C:\kungfu_chess\src\view\gameView.cpp" />
     <ClCompile Include="C:\kungfu_chess\src\texttests\ScriptRunner.cpp" />
+    <ClCompile Include="C:\kungfu_chess\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\kungfu_chess\build\ZERO_CHECK.vcxproj">

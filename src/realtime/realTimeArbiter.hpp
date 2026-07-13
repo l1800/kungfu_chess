@@ -4,6 +4,7 @@
 
 #include "../model/board.hpp"
 
+#include <unordered_map>
 #include <optional>
 
 struct ArrivalEvents
@@ -27,13 +28,21 @@ public:
         const Position& destination
     );
 
+    bool jumpAt(const Position& position);
+
     ArrivalEvents advanceTime(int milliseconds);
 
     const std::optional<Motion>& activeMotion() const;
 
 private:
+    void advanceAirborneTimers(int milliseconds);
+    void promotePawnIfNeeded(Piece& piece);
+
     ArrivalEvents completeActiveMotion();
 
     Board& board_;
     std::optional<Motion> activeMotion_;
+    std::unordered_map<int, int> airborneRemainingMs_;
+
+    static constexpr int AIRBORNE_DURATION_MS = 1000;
 };

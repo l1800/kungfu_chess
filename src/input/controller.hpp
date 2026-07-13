@@ -17,6 +17,7 @@ public:
     );
 
     void click(int x, int y);
+    void jump(int x, int y);
 
     const std::optional<Position>& selectedCell() const;
 

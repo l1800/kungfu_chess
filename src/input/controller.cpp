@@ -35,7 +35,25 @@ void Controller::click(int x, int y)
     const Position source = selectedCell_.value();
     const Position destination = clickedCell.value();
 
-    selectedCell_.reset();
+    const Piece* sourcePiece =
+        board_.getPieceAt(source);
+
+    if (sourcePiece == nullptr)
+    {
+        selectedCell_.reset();
+        return;
+    }
+
+    const Piece* destinationPiece =
+        board_.getPieceAt(destination);
+
+    if (destinationPiece != nullptr &&
+        destinationPiece->color() ==
+        sourcePiece->color())
+    {
+        selectedCell_ = destination;
+        return;
+    }
 
     const MoveResult result =
         gameEngine_.requestMove(
@@ -43,7 +61,26 @@ void Controller::click(int x, int y)
             destination
         );
 
-    (void)result;
+    if (result.isAccepted)
+    {
+        selectedCell_.reset();
+        return;
+    }
+
+    selectedCell_ = source;
+}
+
+void Controller::jump(int x, int y)
+{
+    const std::optional<Position> clickedCell =
+        mapper_.pixelToCell(x, y);
+
+    if (!clickedCell.has_value())
+    {
+        return;
+    }
+
+    (void)gameEngine_.jump(clickedCell.value());
 }
 
 const std::optional<Position>&

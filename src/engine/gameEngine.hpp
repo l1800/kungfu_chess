@@ -33,6 +33,8 @@ public:
         const Position& destination
     );
 
+    virtual MoveResult jump(const Position& cell);
+
     virtual void wait(int milliseconds);
 
     GameSnapshot snapshot() const;

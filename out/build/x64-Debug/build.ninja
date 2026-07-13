@@ -239,6 +239,14 @@ build src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj: CXX_COMPIL
   TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
   TARGET_PDB = src\kungfu_chess.pdb
 
+build src\CMakeFiles\kungfu_chess.dir\main.cpp.obj: CXX_COMPILER__kungfu_chess_Debug C$:\kungfu_chess\src\main.cpp || cmake_object_order_depends_target_kungfu_chess
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -IC:\kungfu_chess\src
+  OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\kungfu_chess.dir
+  TARGET_COMPILE_PDB = src\CMakeFiles\kungfu_chess.dir\kungfu_chess.pdb
+  TARGET_PDB = src\kungfu_chess.pdb
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target kungfu_chess
@@ -247,7 +255,7 @@ build src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj: CXX_COMPIL
 #############################################
 # Link the static library src\kungfu_chess.lib
 
-build src\kungfu_chess.lib: CXX_STATIC_LIBRARY_LINKER__kungfu_chess_Debug src\CMakeFiles\kungfu_chess.dir\model\position.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\piece.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\board.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardParser.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\boardMapper.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\controller.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\pieceRules.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\ruleEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\motion.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\realTimeArbiter.cpp.obj src\CMakeFiles\kungfu_chess.dir\engine\gameEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\view\renderer.cpp.obj src\CMakeFiles\kungfu_chess.dir\view\gameView.cpp.obj src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj
+build src\kungfu_chess.lib: CXX_STATIC_LIBRARY_LINKER__kungfu_chess_Debug src\CMakeFiles\kungfu_chess.dir\model\position.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\piece.cpp.obj src\CMakeFiles\kungfu_chess.dir\model\board.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardParser.cpp.obj src\CMakeFiles\kungfu_chess.dir\io\boardPrinter.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\boardMapper.cpp.obj src\CMakeFiles\kungfu_chess.dir\input\controller.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\pieceRules.cpp.obj src\CMakeFiles\kungfu_chess.dir\rules\ruleEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\motion.cpp.obj src\CMakeFiles\kungfu_chess.dir\realtime\realTimeArbiter.cpp.obj src\CMakeFiles\kungfu_chess.dir\engine\gameEngine.cpp.obj src\CMakeFiles\kungfu_chess.dir\view\renderer.cpp.obj src\CMakeFiles\kungfu_chess.dir\view\gameView.cpp.obj src\CMakeFiles\kungfu_chess.dir\texttests\ScriptRunner.cpp.obj src\CMakeFiles\kungfu_chess.dir\main.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = src\CMakeFiles\kungfu_chess.dir

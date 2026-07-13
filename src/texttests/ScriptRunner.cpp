@@ -28,6 +28,7 @@ namespace
     {
         return line == "print board" ||
             startsWith(line, "click ") ||
+            startsWith(line, "jump ") ||
             startsWith(line, "wait ");
     }
 
@@ -188,11 +189,33 @@ std::string ScriptRunner::run(
             continue;
         }
 
+        if (startsWith(command, "jump "))
+        {
+            std::istringstream commandStream(command);
+
+            std::string commandName;
+            int x = 0;
+            int y = 0;
+
+            commandStream >> commandName >> x >> y;
+
+            if (!commandStream ||
+                commandName != "jump")
+            {
+                throw std::invalid_argument(
+                    "invalid_jump_command"
+                );
+            }
+
+            controller.jump(x, y);
+            continue;
+        }
+
         if (command == "print board")
         {
             if (hasPrintedBoard)
             {
-                output += "\n\n";
+                output += "\n";
             }
 
             output += BoardPrinter::print(board);

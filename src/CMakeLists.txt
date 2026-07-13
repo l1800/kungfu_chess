@@ -21,7 +21,7 @@ add_library(kungfu_chess
     view/gameView.cpp
 
     texttests/ScriptRunner.cpp
-)
+ "main.cpp")
 
 target_include_directories(kungfu_chess
     PUBLIC
