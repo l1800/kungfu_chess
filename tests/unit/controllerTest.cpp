@@ -4,10 +4,18 @@
 
 #include <optional>
 
-class FakeMoveRequester : public MoveRequester
+class FakeGameEngine : public GameEngine
 {
 public:
-    void requestMove(
+    FakeGameEngine(
+        Board& board,
+        RuleEngine& ruleEngine
+    )
+        : GameEngine(board, ruleEngine)
+    {
+    }
+
+    MoveResult requestMove(
         const Position& source,
         const Position& destination
     ) override
@@ -15,11 +23,16 @@ public:
         called = true;
         receivedSource = source;
         receivedDestination = destination;
+
+        return resultToReturn;
     }
 
     bool called = false;
+
     std::optional<Position> receivedSource;
     std::optional<Position> receivedDestination;
+
+    MoveResult resultToReturn{ true, "ok" };
 };
 
 TEST(ControllerTest, FirstClickOnPieceSelectsIt)
@@ -35,48 +48,64 @@ TEST(ControllerTest, FirstClickOnPieceSelectsIt)
         )
     );
 
-    const BoardMapper mapper(3, 3);
-    FakeMoveRequester requester;
+    RuleEngine ruleEngine;
+    FakeGameEngine gameEngine(board, ruleEngine);
+    BoardMapper mapper(3, 3);
 
-    Controller controller(board, mapper, requester);
+    Controller controller(
+        board,
+        mapper,
+        gameEngine
+    );
 
     controller.click(150, 150);
 
     ASSERT_TRUE(controller.selectedCell().has_value());
+
     EXPECT_EQ(
         controller.selectedCell().value(),
         Position(1, 1)
     );
 
-    EXPECT_FALSE(requester.called);
+    EXPECT_FALSE(gameEngine.called);
 }
 
 TEST(ControllerTest, FirstClickOnEmptyCellIsIgnored)
 {
-    const Board board(3, 3);
-    const BoardMapper mapper(3, 3);
-    FakeMoveRequester requester;
+    Board board(3, 3);
+    RuleEngine ruleEngine;
+    FakeGameEngine gameEngine(board, ruleEngine);
+    BoardMapper mapper(3, 3);
 
-    Controller controller(board, mapper, requester);
+    Controller controller(
+        board,
+        mapper,
+        gameEngine
+    );
 
     controller.click(50, 50);
 
     EXPECT_FALSE(controller.selectedCell().has_value());
-    EXPECT_FALSE(requester.called);
+    EXPECT_FALSE(gameEngine.called);
 }
 
 TEST(ControllerTest, OutsideClickWithoutSelectionIsIgnored)
 {
-    const Board board(3, 3);
-    const BoardMapper mapper(3, 3);
-    FakeMoveRequester requester;
+    Board board(3, 3);
+    RuleEngine ruleEngine;
+    FakeGameEngine gameEngine(board, ruleEngine);
+    BoardMapper mapper(3, 3);
 
-    Controller controller(board, mapper, requester);
+    Controller controller(
+        board,
+        mapper,
+        gameEngine
+    );
 
     controller.click(350, 50);
 
     EXPECT_FALSE(controller.selectedCell().has_value());
-    EXPECT_FALSE(requester.called);
+    EXPECT_FALSE(gameEngine.called);
 }
 
 TEST(ControllerTest, SecondInsideClickRequestsMove)
@@ -92,29 +121,70 @@ TEST(ControllerTest, SecondInsideClickRequestsMove)
         )
     );
 
-    const BoardMapper mapper(3, 3);
-    FakeMoveRequester requester;
+    RuleEngine ruleEngine;
+    FakeGameEngine gameEngine(board, ruleEngine);
+    BoardMapper mapper(3, 3);
 
-    Controller controller(board, mapper, requester);
+    Controller controller(
+        board,
+        mapper,
+        gameEngine
+    );
 
     controller.click(50, 50);
     controller.click(250, 150);
 
-    EXPECT_TRUE(requester.called);
+    EXPECT_TRUE(gameEngine.called);
 
-    ASSERT_TRUE(requester.receivedSource.has_value());
-    ASSERT_TRUE(requester.receivedDestination.has_value());
+    ASSERT_TRUE(gameEngine.receivedSource.has_value());
+    ASSERT_TRUE(gameEngine.receivedDestination.has_value());
 
     EXPECT_EQ(
-        requester.receivedSource.value(),
+        gameEngine.receivedSource.value(),
         Position(0, 0)
     );
 
     EXPECT_EQ(
-        requester.receivedDestination.value(),
+        gameEngine.receivedDestination.value(),
         Position(1, 2)
     );
 
+    EXPECT_FALSE(controller.selectedCell().has_value());
+}
+
+TEST(ControllerTest, RejectedMoveStillClearsSelection)
+{
+    Board board(3, 3);
+
+    board.addPiece(
+        Piece(
+            1,
+            PieceColor::White,
+            PieceKind::Rook,
+            Position(0, 0)
+        )
+    );
+
+    RuleEngine ruleEngine;
+    FakeGameEngine gameEngine(board, ruleEngine);
+
+    gameEngine.resultToReturn = {
+        false,
+        "illegal_piece_move"
+    };
+
+    BoardMapper mapper(3, 3);
+
+    Controller controller(
+        board,
+        mapper,
+        gameEngine
+    );
+
+    controller.click(50, 50);
+    controller.click(150, 150);
+
+    EXPECT_TRUE(gameEngine.called);
     EXPECT_FALSE(controller.selectedCell().has_value());
 }
 
@@ -131,10 +201,15 @@ TEST(ControllerTest, OutsideClickWithSelectionCancelsSelection)
         )
     );
 
-    const BoardMapper mapper(3, 3);
-    FakeMoveRequester requester;
+    RuleEngine ruleEngine;
+    FakeGameEngine gameEngine(board, ruleEngine);
+    BoardMapper mapper(3, 3);
 
-    Controller controller(board, mapper, requester);
+    Controller controller(
+        board,
+        mapper,
+        gameEngine
+    );
 
     controller.click(50, 50);
 
@@ -143,5 +218,5 @@ TEST(ControllerTest, OutsideClickWithSelectionCancelsSelection)
     controller.click(350, 50);
 
     EXPECT_FALSE(controller.selectedCell().has_value());
-    EXPECT_FALSE(requester.called);
+    EXPECT_FALSE(gameEngine.called);
 }

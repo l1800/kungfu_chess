@@ -9,10 +9,13 @@ add_library(kungfu_chess
     input/boardMapper.cpp
     input/controller.cpp
 
-    rules/rookRule.cpp
+    rules/pieceRules.cpp
+    rules/ruleEngine.cpp
+
+    engine/gameEngine.cpp
 
     texttests/ScriptRunner.cpp
- "input/boardMapper.cpp" "input/controller.cpp")
+)
 
 target_include_directories(kungfu_chess
     PUBLIC

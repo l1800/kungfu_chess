@@ -311,9 +311,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\kungfu_chess\tests\unit\BoardParserTest.cpp" />
-    <ClCompile Include="C:\kungfu_chess\tests\unit\boardMapperTest.cpp" />
-    <ClCompile Include="C:\kungfu_chess\tests\unit\controllerTest.cpp" />
-    <ClCompile Include="C:\kungfu_chess\tests\unit\rookRuleTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\kungfu_chess\build\ZERO_CHECK.vcxproj">

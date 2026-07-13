@@ -1,14 +1,112 @@
-Start testing: Jul 12 18:39 שעון קיץ ירושלים
+Start testing: Jul 13 11:06 שעון קיץ ירושלים
 ----------------------------------------------------------
-4/9 Testing: BoardParserTest
-4/9 Test: BoardParserTest
-Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
+1/11 Testing: PositionTest
+1/11 Test: PositionTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/PositionTest.exe"
 Directory: C:/kungfu_chess/build/tests/unit
-"BoardParserTest" start time: Jul 12 18:39 שעון קיץ ירושלים
+"PositionTest" start time: Jul 13 11:06 שעון קיץ ירושלים
 Output:
 ----------------------------------------------------------
 Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
-[==========] Running 20 tests from 4 test suites.
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from PositionTest
+[ RUN      ] PositionTest.EqualPositionsAreEqual
+[       OK ] PositionTest.EqualPositionsAreEqual (0 ms)
+[ RUN      ] PositionTest.DifferentRowsAreNotEqual
+[       OK ] PositionTest.DifferentRowsAreNotEqual (0 ms)
+[ RUN      ] PositionTest.DifferentColumnsAreNotEqual
+[       OK ] PositionTest.DifferentColumnsAreNotEqual (0 ms)
+[ RUN      ] PositionTest.ProducesReadableOutput
+[       OK ] PositionTest.ProducesReadableOutput (0 ms)
+[----------] 4 tests from PositionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"PositionTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"PositionTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/11 Testing: PieceTest
+2/11 Test: PieceTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/PieceTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"PieceTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PieceTest
+[ RUN      ] PieceTest.StoresInitialValues
+[       OK ] PieceTest.StoresInitialValues (0 ms)
+[----------] 1 test from PieceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"PieceTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"PieceTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/11 Testing: BoardTest
+3/11 Test: BoardTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"BoardTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from BoardTest
+[ RUN      ] BoardTest.StoresDimensions
+[       OK ] BoardTest.StoresDimensions (0 ms)
+[ RUN      ] BoardTest.ReportsWhetherPositionIsInside
+[       OK ] BoardTest.ReportsWhetherPositionIsInside (0 ms)
+[ RUN      ] BoardTest.EmptyCellReturnsNull
+[       OK ] BoardTest.EmptyCellReturnsNull (0 ms)
+[ RUN      ] BoardTest.CanAddAndFindPiece
+[       OK ] BoardTest.CanAddAndFindPiece (0 ms)
+[ RUN      ] BoardTest.RejectsDuplicateOccupancy
+[       OK ] BoardTest.RejectsDuplicateOccupancy (0 ms)
+[ RUN      ] BoardTest.RejectsDuplicatePieceId
+[       OK ] BoardTest.RejectsDuplicatePieceId (0 ms)
+[ RUN      ] BoardTest.MovesPiece
+[       OK ] BoardTest.MovesPiece (0 ms)
+[ RUN      ] BoardTest.RemovesPiece
+[       OK ] BoardTest.RemovesPiece (0 ms)
+[----------] 8 tests from BoardTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 8 tests.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"BoardTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"BoardTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/11 Testing: BoardParserTest
+4/11 Test: BoardParserTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardParserTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"BoardParserTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 3 tests from BoardParserTest
 [ RUN      ] BoardParserTest.ParsesRectangularBoard
@@ -19,6 +117,42 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [       OK ] BoardParserTest.RejectsUnknownToken (0 ms)
 [----------] 3 tests from BoardParserTest (0 ms total)
 
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"BoardParserTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"BoardParserTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/11 Testing: BoardPrinterTest
+5/11 Test: BoardPrinterTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardPrinterTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"BoardPrinterTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"BoardPrinterTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"BoardPrinterTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/11 Testing: BoardMapperTest
+6/11 Test: BoardMapperTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/BoardMapperTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"BoardMapperTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
 [----------] 6 tests from BoardMapperTest
 [ RUN      ] BoardMapperTest.MapsTopLeftCell
 [       OK ] BoardMapperTest.MapsTopLeftCell (0 ms)
@@ -34,7 +168,28 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [       OK ] BoardMapperTest.RejectsCoordinatesOutsideBoard (0 ms)
 [----------] 6 tests from BoardMapperTest (0 ms total)
 
-[----------] 5 tests from ControllerTest
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"BoardMapperTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"BoardMapperTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/11 Testing: ControllerTest
+7/11 Test: ControllerTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/ControllerTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"ControllerTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from ControllerTest
 [ RUN      ] ControllerTest.FirstClickOnPieceSelectsIt
 [       OK ] ControllerTest.FirstClickOnPieceSelectsIt (0 ms)
 [ RUN      ] ControllerTest.FirstClickOnEmptyCellIsIgnored
@@ -43,34 +198,124 @@ Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_mai
 [       OK ] ControllerTest.OutsideClickWithoutSelectionIsIgnored (0 ms)
 [ RUN      ] ControllerTest.SecondInsideClickRequestsMove
 [       OK ] ControllerTest.SecondInsideClickRequestsMove (0 ms)
+[ RUN      ] ControllerTest.RejectedMoveStillClearsSelection
+[       OK ] ControllerTest.RejectedMoveStillClearsSelection (0 ms)
 [ RUN      ] ControllerTest.OutsideClickWithSelectionCancelsSelection
 [       OK ] ControllerTest.OutsideClickWithSelectionCancelsSelection (0 ms)
-[----------] 5 tests from ControllerTest (0 ms total)
-
-[----------] 6 tests from RookRuleTest
-[ RUN      ] RookRuleTest.MovesAlongRowsAndColumns
-[       OK ] RookRuleTest.MovesAlongRowsAndColumns (0 ms)
-[ RUN      ] RookRuleTest.DoesNotMoveDiagonally
-[       OK ] RookRuleTest.DoesNotMoveDiagonally (0 ms)
-[ RUN      ] RookRuleTest.StopsBeforeFriendlyPiece
-[       OK ] RookRuleTest.StopsBeforeFriendlyPiece (0 ms)
-[ RUN      ] RookRuleTest.IncludesEnemyPieceAsDestination
-[       OK ] RookRuleTest.IncludesEnemyPieceAsDestination (0 ms)
-[ RUN      ] RookRuleTest.CannotMovePastEnemyPiece
-[       OK ] RookRuleTest.CannotMovePastEnemyPiece (0 ms)
-[ RUN      ] RookRuleTest.RejectsNonRookPiece
-[       OK ] RookRuleTest.RejectsNonRookPiece (0 ms)
-[----------] 6 tests from RookRuleTest (0 ms total)
+[----------] 6 tests from ControllerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 20 tests from 4 test suites ran. (0 ms total)
-[  PASSED  ] 20 tests.
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.
 <end of output>
-Test time =   0.04 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"BoardParserTest" end time: Jul 12 18:39 שעון קיץ ירושלים
-"BoardParserTest" time elapsed: 00:00:00
+"ControllerTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"ControllerTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 12 18:39 שעון קיץ ירושלים
+8/11 Testing: PieceRulesTest
+8/11 Test: PieceRulesTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/PieceRulesTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"PieceRulesTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+This test program does NOT link in any test case. Please make sure this is intended.
+[==========] Running 0 tests from 0 test suites.
+[==========] 0 tests from 0 test suites ran. (0 ms total)
+[  PASSED  ] 0 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"PieceRulesTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"PieceRulesTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/11 Testing: RuleEngineTest
+9/11 Test: RuleEngineTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/RuleEngineTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"RuleEngineTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from RuleEngineTest
+[ RUN      ] RuleEngineTest.RejectsOutsideBoard
+[       OK ] RuleEngineTest.RejectsOutsideBoard (0 ms)
+[ RUN      ] RuleEngineTest.RejectsEmptySource
+[       OK ] RuleEngineTest.RejectsEmptySource (0 ms)
+[ RUN      ] RuleEngineTest.RejectsFriendlyDestination
+[       OK ] RuleEngineTest.RejectsFriendlyDestination (0 ms)
+[ RUN      ] RuleEngineTest.AcceptsLegalRookMove
+[       OK ] RuleEngineTest.AcceptsLegalRookMove (0 ms)
+[ RUN      ] RuleEngineTest.RejectsDiagonalRookMove
+[       OK ] RuleEngineTest.RejectsDiagonalRookMove (0 ms)
+[ RUN      ] RuleEngineTest.DoesNotChangeBoard
+[       OK ] RuleEngineTest.DoesNotChangeBoard (0 ms)
+[----------] 6 tests from RuleEngineTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"RuleEngineTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"RuleEngineTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/11 Testing: GameEngineTest
+10/11 Test: GameEngineTest
+Command: "C:/kungfu_chess/build/tests/unit/Debug/GameEngineTest.exe"
+Directory: C:/kungfu_chess/build/tests/unit
+"GameEngineTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+Running main() from C:\kungfu_chess\external\googletest\googletest\src\gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from GameEngineTest
+[ RUN      ] GameEngineTest.RejectsGameOverBeforeValidation
+[       OK ] GameEngineTest.RejectsGameOverBeforeValidation (0 ms)
+[ RUN      ] GameEngineTest.DelegatesRequestToRuleEngine
+[       OK ] GameEngineTest.DelegatesRequestToRuleEngine (0 ms)
+[ RUN      ] GameEngineTest.CopiesRuleEngineRejectionReason
+[       OK ] GameEngineTest.CopiesRuleEngineRejectionReason (0 ms)
+[ RUN      ] GameEngineTest.AcceptedMoveDoesNotChangeBoard
+[       OK ] GameEngineTest.AcceptedMoveDoesNotChangeBoard (0 ms)
+[----------] 4 tests from GameEngineTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"GameEngineTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"GameEngineTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/11 Testing: ScriptRunnerTest
+11/11 Test: ScriptRunnerTest
+Command: "C:/kungfu_chess/build/tests/integration/Debug/ScriptRunnerTest.exe"
+Directory: C:/kungfu_chess/build/tests/integration
+"ScriptRunnerTest" start time: Jul 13 11:06 שעון קיץ ירושלים
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"ScriptRunnerTest" end time: Jul 13 11:06 שעון קיץ ירושלים
+"ScriptRunnerTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 13 11:06 שעון קיץ ירושלים

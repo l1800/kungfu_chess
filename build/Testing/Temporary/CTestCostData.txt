@@ -1,7 +1,12 @@
-PositionTest 1 0
-PieceTest 1 0
-BoardTest 1 0
-BoardParserTest 3 0.0144253
-BoardPrinterTest 1 0
-ScriptRunnerTest 1 0
+BoardParserTest 1 0.024985
+PositionTest 1 0.0449723
+PieceTest 1 0.0313468
+BoardTest 1 0.027698
+BoardPrinterTest 1 0.0176686
+BoardMapperTest 1 0.0247168
+ControllerTest 1 0.0250779
+PieceRulesTest 1 0.023656
+RuleEngineTest 1 0.0247166
+GameEngineTest 1 0.0310318
+ScriptRunnerTest 1 0.0208976
 ---

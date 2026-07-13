@@ -2,7 +2,7 @@
 
 #include "boardMapper.hpp"
 
-#include "../engine/moveRequester.hpp"
+#include "../engine/gameEngine.hpp"
 #include "../model/board.hpp"
 
 #include <optional>
@@ -13,7 +13,7 @@ public:
     Controller(
         const Board& board,
         const BoardMapper& mapper,
-        MoveRequester& moveRequester
+        GameEngine& gameEngine
     );
 
     void click(int x, int y);
@@ -23,7 +23,7 @@ public:
 private:
     const Board& board_;
     const BoardMapper& mapper_;
-    MoveRequester& moveRequester_;
+    GameEngine& gameEngine_;
 
     std::optional<Position> selectedCell_;
 };

@@ -20,13 +20,19 @@
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\ControllerTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\GameEngineTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PieceRulesTest.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PieceTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\unit\Debug\PositionTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RookRuleTest.exe</FullPath>
+      <FullPath>C:\kungfu_chess\build\tests\unit\Debug\RuleEngineTest.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\kungfu_chess\build\tests\integration\Debug\ScriptRunnerTest.exe</FullPath>

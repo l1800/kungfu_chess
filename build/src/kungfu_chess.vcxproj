@@ -269,7 +269,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\kungfu_chess\src\io\boardPrinter.cpp" />
     <ClCompile Include="C:\kungfu_chess\src\input\boardMapper.cpp" />
     <ClCompile Include="C:\kungfu_chess\src\input\controller.cpp" />
-    <ClCompile Include="C:\kungfu_chess\src\rules\rookRule.cpp" />
+    <ClCompile Include="C:\kungfu_chess\src\rules\pieceRules.cpp" />
+    <ClCompile Include="C:\kungfu_chess\src\rules\ruleEngine.cpp" />
+    <ClCompile Include="C:\kungfu_chess\src\engine\gameEngine.cpp" />
     <ClCompile Include="C:\kungfu_chess\src\texttests\ScriptRunner.cpp" />
   </ItemGroup>
   <ItemGroup>

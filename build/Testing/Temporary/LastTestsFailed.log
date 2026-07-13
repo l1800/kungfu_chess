@@ -1,1 +1,11 @@
+1:PositionTest
+2:PieceTest
+3:BoardTest
 4:BoardParserTest
+5:BoardPrinterTest
+6:BoardMapperTest
+7:ControllerTest
+8:PieceRulesTest
+9:RuleEngineTest
+10:GameEngineTest
+11:ScriptRunnerTest

@@ -3,11 +3,11 @@
 Controller::Controller(
     const Board& board,
     const BoardMapper& mapper,
-    MoveRequester& moveRequester
+    GameEngine& gameEngine
 )
     : board_(board),
     mapper_(mapper),
-    moveRequester_(moveRequester)
+    gameEngine_(gameEngine)
 {
 }
 
@@ -18,11 +18,7 @@ void Controller::click(int x, int y)
 
     if (!clickedCell.has_value())
     {
-        if (selectedCell_.has_value())
-        {
-            selectedCell_.reset();
-        }
-
+        selectedCell_.reset();
         return;
     }
 
@@ -41,7 +37,13 @@ void Controller::click(int x, int y)
 
     selectedCell_.reset();
 
-    moveRequester_.requestMove(source, destination);
+    const MoveResult result =
+        gameEngine_.requestMove(
+            source,
+            destination
+        );
+
+    (void)result;
 }
 
 const std::optional<Position>&
