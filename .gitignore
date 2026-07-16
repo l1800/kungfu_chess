@@ -1,10 +1,40 @@
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+*.ipch
+
+# Build output
 build/
 out/
-.vs/
-*.exe
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Compiled files
 *.obj
+*.o
+*.exe
+*.dll
 *.lib
 *.pdb
 *.ilk
-*.user
-*.suo
+
+# Local OpenCV package
+OpenCV_451/
+
+# Python cache
+__pycache__/
+*.pyc
+
+.vs/
+build/
+OpenCV_451/
+
+*.dll
+*.lib
+*.exe
+*.obj
+*.pdb
+*.ipch
+*.VC.db

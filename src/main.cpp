@@ -5,8 +5,11 @@
 #include "realtime/realTimeArbiter.hpp"
 #include "rules/ruleEngine.hpp"
 #include "view/gameView.hpp"
-#include "view/renderTarget.hpp"
+#include "view/imageCatalog.hpp"
+#include "view/imgRenderTarget.hpp"
 #include "view/renderer.hpp"
+
+#include <opencv2/opencv.hpp>
 
 #include <exception>
 #include <iostream>
@@ -14,64 +17,38 @@
 
 namespace
 {
-    class ConsoleRenderTarget : public RenderTarget
+    constexpr const char* WINDOW_NAME =
+        "Kung Fu Chess";
+
+    struct MouseContext
     {
-    public:
-        void beginFrame(
-            int boardWidth,
-            int boardHeight,
-            int cellSize
-        ) override
-        {
-            std::cout
-                << "Board: "
-                << boardWidth
-                << "x"
-                << boardHeight
-                << ", cell size: "
-                << cellSize
-                << '\n';
-        }
-
-        void drawPiece(
-            const PieceSnapshot& piece
-        ) override
-        {
-            std::cout
-                << "Piece "
-                << piece.id
-                << " at pixel ("
-                << piece.pixelX
-                << ", "
-                << piece.pixelY
-                << ")\n";
-        }
-
-        void drawSelection(
-            const Position& selectedCell,
-            int cellSize
-        ) override
-        {
-            std::cout
-                << "Selected cell: row="
-                << selectedCell.row()
-                << ", col="
-                << selectedCell.col()
-                << ", cell size="
-                << cellSize
-                << '\n';
-        }
-
-        void drawGameOver() override
-        {
-            std::cout << "Game over\n";
-        }
-
-        void endFrame() override
-        {
-            std::cout << "Frame finished\n";
-        }
+        GameView* gameView;
     };
+
+    void handleMouse(
+        int event,
+        int x,
+        int y,
+        int,
+        void* userData
+    )
+    {
+        if (event != cv::EVENT_LBUTTONDOWN)
+        {
+            return;
+        }
+
+        MouseContext* context =
+            static_cast<MouseContext*>(userData);
+
+        if (context == nullptr ||
+            context->gameView == nullptr)
+        {
+            return;
+        }
+
+        context->gameView->onClick(x, y);
+    }
 }
 
 int main()
@@ -79,9 +56,14 @@ int main()
     try
     {
         const std::string boardText =
-            "wR . bK\n"
-            ". . .\n"
-            ". . .";
+            "bR bN bB bQ bK bB bN bR\n"
+            "bP bP bP bP bP bP bP bP\n"
+            ". . . . . . . .\n"
+            ". . . . . . . .\n"
+            ". . . . . . . .\n"
+            ". . . . . . . .\n"
+            "wP wP wP wP wP wP wP wP\n"
+            "wR wN wB wQ wK wB wN wR";
 
         Board board =
             BoardParser::parse(boardText);
@@ -109,7 +91,13 @@ int main()
             gameEngine
         );
 
-        ConsoleRenderTarget renderTarget;
+        ImageCatalog imageCatalog(
+            GameEngine::CELL_SIZE
+        );
+
+        ImgRenderTarget renderTarget(
+            imageCatalog
+        );
 
         Renderer renderer(
             renderTarget
@@ -122,26 +110,54 @@ int main()
         );
 
         /*
-         * ציור מצב התחלתי.
+         * ציור ראשון יוצר את חלון OpenCV.
          */
         gameView.draw();
 
-        /*
-         * דוגמת נתיב קלט אמיתי:
-         * בחירת הצריח ואז בחירת יעד.
-         */
-        gameView.onClick(50, 50);
-        gameView.onClick(150, 50);
+        MouseContext mouseContext{
+            &gameView
+        };
 
-        /*
-         * קידום זמן מדומה של תא אחד.
-         */
-        gameEngine.wait(1000);
+        cv::setMouseCallback(
+            WINDOW_NAME,
+            handleMouse,
+            &mouseContext
+        );
 
-        /*
-         * ציור מצב לאחר התנועה.
-         */
-        gameView.draw();
+        while (true)
+        {
+            /*
+             * קידום זמן מדומה.
+             * אין sleep אמיתי.
+             */
+            gameEngine.wait(16);
+
+            gameView.draw();
+
+            const int key =
+                renderTarget.lastKey();
+
+            /*
+             * Esc
+             */
+            if (key == 27)
+            {
+                break;
+            }
+
+            /*
+             * סגירת החלון באמצעות X.
+             */
+            if (cv::getWindowProperty(
+                WINDOW_NAME,
+                cv::WND_PROP_VISIBLE
+            ) < 1)
+            {
+                break;
+            }
+        }
+
+        cv::destroyAllWindows();
 
         return 0;
     }

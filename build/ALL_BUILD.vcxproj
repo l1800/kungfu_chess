@@ -247,6 +247,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{B8FCE580-6CF2-369E-9244-6229E5B8652E}</Project>
       <Name>kungfu_chess</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\kungfu_chess\build\src\kungfu_chess_app.vcxproj">
+      <Project>{9610687F-A3CB-347F-81A0-DBB8CAA2B7DD}</Project>
+      <Name>kungfu_chess_app</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

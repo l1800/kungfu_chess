@@ -3,6 +3,7 @@ C:/kungfu_chess/build/CMakeFiles/INSTALL.dir
 C:/kungfu_chess/build/CMakeFiles/ALL_BUILD.dir
 C:/kungfu_chess/build/CMakeFiles/ZERO_CHECK.dir
 C:/kungfu_chess/build/src/CMakeFiles/kungfu_chess.dir
+C:/kungfu_chess/build/src/CMakeFiles/kungfu_chess_app.dir
 C:/kungfu_chess/build/src/CMakeFiles/RUN_TESTS.dir
 C:/kungfu_chess/build/src/CMakeFiles/INSTALL.dir
 C:/kungfu_chess/build/external/googletest/CMakeFiles/RUN_TESTS.dir

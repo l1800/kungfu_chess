@@ -5,6 +5,7 @@ C:/kungfu_chess/out/build/x64-Debug/CMakeFiles/list_install_components.dir
 C:/kungfu_chess/out/build/x64-Debug/CMakeFiles/install.dir
 C:/kungfu_chess/out/build/x64-Debug/CMakeFiles/install/local.dir
 C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/kungfu_chess.dir
+C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/kungfu_chess_app.dir
 C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/test.dir
 C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/edit_cache.dir
 C:/kungfu_chess/out/build/x64-Debug/src/CMakeFiles/rebuild_cache.dir
